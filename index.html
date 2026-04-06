@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BN1 Study Hub — LO2 & LO4</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#080c0a;--surface:#111916;--surface2:#182220;--surface3:#1f2d28;
+  --accent:#4ae3a7;--accent2:#2bc4e8;--accent3:#f0c040;--accent4:#c084fc;
+  --text:#e4ebe6;--text2:#7a9484;--text3:#4a6455;
+  --danger:#e85d5d;--serif:'Instrument Serif',Georgia,serif;
+  --sans:'DM Sans',-apple-system,sans-serif;--radius:14px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+button{font-family:var(--sans);cursor:pointer}
+textarea{font-family:var(--sans)}
+::selection{background:var(--accent);color:var(--bg)}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--surface3);border-radius:3px}
+
+.app{max-width:680px;margin:0 auto;padding:32px 20px 80px}
+
+/* ─── NAV ─── */
+.top-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;position:sticky;top:0;z-index:90;padding:12px 0;background:var(--bg)}
+.top-bar::after{content:'';position:absolute;bottom:-12px;left:-20px;right:-20px;height:12px;background:linear-gradient(var(--bg),transparent);pointer-events:none}
+.brand{font-family:var(--serif);font-size:22px;color:var(--accent);cursor:pointer}
+.brand em{color:var(--text)}
+.nav-pills{display:flex;gap:4px;background:var(--surface);border-radius:99px;padding:3px}
+.nav-pill{padding:7px 16px;border-radius:99px;border:none;font-size:12px;font-weight:600;letter-spacing:.5px;background:transparent;color:var(--text2);transition:all .2s}
+.nav-pill.active{background:var(--accent);color:var(--bg)}
+.nav-pill:hover:not(.active){color:var(--text)}
+
+/* ─── FILTER ─── */
+.filter-bar{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.filter-btn{padding:6px 18px;border-radius:99px;font-size:12px;font-weight:600;border:1px solid var(--surface2);background:transparent;color:var(--text2);transition:all .15s}
+.filter-btn.active{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+
+/* ─── HOME ─── */
+.hero{text-align:center;padding:48px 0 40px}
+.hero-label{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:12px}
+.hero h1{font-family:var(--serif);font-size:56px;font-weight:400;line-height:1.05;margin-bottom:10px}
+.hero h1 em{color:var(--accent);font-style:italic}
+.hero p{color:var(--text2);font-size:14px;max-width:400px;margin:0 auto}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:36px}
+.stat-card{background:var(--surface);border-radius:var(--radius);padding:18px 8px;text-align:center;border:1px solid transparent;transition:border-color .2s}
+.stat-card:hover{border-color:var(--surface3)}
+.stat-val{font-size:26px;font-family:var(--serif)}
+.stat-label{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-top:4px}
+.home-cards{display:flex;flex-direction:column;gap:10px}
+.home-card{display:flex;align-items:center;gap:18px;background:var(--surface);border:1px solid transparent;border-radius:var(--radius);padding:22px 26px;text-align:left;width:100%;transition:all .2s}
+.home-card:hover{background:var(--surface2);border-color:var(--accent)33}
+.home-card .icon{font-size:30px;width:48px;text-align:center;flex-shrink:0}
+.home-card .title{font-family:var(--serif);font-size:22px}
+.home-card .desc{font-size:12px;color:var(--text2);margin-top:2px}
+
+/* ─── FLASHCARD ─── */
+.fc-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.fc-header h2{font-family:var(--serif);font-size:34px}
+.fc-counter{color:var(--text2);font-size:13px}
+.fc-progress-bar{height:3px;background:var(--surface2);border-radius:2px;margin-bottom:20px;overflow:hidden}
+.fc-progress-fill{height:100%;border-radius:2px;transition:width .3s}
+.card-wrap{cursor:pointer;margin-bottom:16px}
+.card{background:var(--surface);border-radius:var(--radius);min-height:300px;padding:32px;display:flex;flex-direction:column;justify-content:center;border:1px solid var(--surface2);position:relative;transition:border-color .2s}
+.card:hover{border-color:var(--surface3)}
+.card-tags{position:absolute;top:16px;left:20px;display:flex;gap:8px}
+.tag{font-size:10px;padding:3px 10px;border-radius:99px;font-weight:600;letter-spacing:.5px}
+.tag-lo2{background:rgba(74,227,167,.12);color:var(--accent)}
+.tag-lo4{background:rgba(43,196,232,.12);color:var(--accent2)}
+.tag-topic{background:rgba(255,255,255,.04);color:var(--text2)}
+.card-side-label{position:absolute;top:16px;right:20px;font-size:10px;color:var(--text3);letter-spacing:1px;text-transform:uppercase}
+.card-front{font-family:var(--serif);font-size:20px;line-height:1.5;margin-top:16px}
+.card-back{font-size:14px;line-height:1.85;margin-top:16px;white-space:pre-line}
+.card-hint{margin-top:20px;font-size:12px;color:var(--text3);text-align:center}
+.rate-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.rate-btn{background:var(--surface);border-radius:10px;padding:14px 6px;text-align:center;transition:all .15s}
+.rate-btn:hover{transform:translateY(-1px)}
+.rate-label{font-size:14px;font-weight:600}
+.rate-sub{font-size:10px;color:var(--text2);margin-top:2px}
+.done-box{background:var(--surface);border-radius:var(--radius);padding:52px 32px;text-align:center}
+.done-emoji{font-size:52px;margin-bottom:16px}
+.done-title{font-family:var(--serif);font-size:26px;color:var(--accent);margin-bottom:8px}
+.done-desc{color:var(--text2);font-size:14px}
+
+/* ─── STUDY ─── */
+.study-header h2{font-family:var(--serif);font-size:34px;margin-bottom:16px}
+.accordion{display:flex;flex-direction:column;gap:6px}
+.acc-trigger{width:100%;display:flex;justify-content:space-between;align-items:center;background:var(--surface);border:1px solid transparent;padding:18px 24px;text-align:left;transition:all .2s;font-size:15px}
+.acc-trigger:hover{background:var(--surface2)}
+.acc-trigger.open{background:var(--surface2);border-color:rgba(43,196,232,.12);border-radius:var(--radius) var(--radius) 0 0 !important}
+.acc-trigger:not(.open){border-radius:var(--radius)}
+.acc-lo{font-size:10px;padding:3px 10px;border-radius:99px;font-weight:600;margin-right:12px}
+.acc-title{font-family:var(--serif);font-size:19px;color:var(--text)}
+.acc-arrow{color:var(--text2);font-size:16px;transition:transform .2s}
+.acc-arrow.open{transform:rotate(180deg)}
+.acc-body{background:var(--surface);border-top:1px solid var(--surface2);border-radius:0 0 var(--radius) var(--radius);padding:28px 28px 32px;font-size:14px;line-height:1.9}
+.acc-body h3{font-family:var(--serif);font-size:18px;color:var(--accent);margin:24px 0 10px}
+.acc-body h3:first-child{margin-top:0}
+.acc-body h4{font-size:14px;font-weight:700;color:var(--accent2);margin:18px 0 6px}
+.acc-body p{margin:8px 0;color:var(--text)}
+.acc-body .highlight{background:rgba(74,227,167,.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:13px}
+.acc-body .highlight strong{color:var(--accent)}
+.acc-body .warn{background:rgba(240,192,64,.06);border-left:3px solid var(--accent3);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:13px}
+.acc-body ul{margin:6px 0 6px 8px;list-style:none}
+.acc-body ul li{position:relative;padding-left:18px;margin:4px 0;font-size:14px}
+.acc-body ul li::before{content:'•';position:absolute;left:0;color:var(--accent)}
+.acc-body table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.acc-body th{text-align:left;padding:10px 14px;background:var(--surface3);color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:1px;border:1px solid var(--surface3)}
+.acc-body td{padding:10px 14px;border:1px solid var(--surface2);vertical-align:top}
+.acc-body .memory-aid{background:rgba(192,132,252,.08);border:1px solid rgba(192,132,252,.15);border-radius:10px;padding:14px 18px;margin:14px 0;font-size:13px;color:var(--accent4)}
+
+/* ─── QUIZ ─── */
+.quiz-header h2{font-family:var(--serif);font-size:34px;margin-bottom:6px}
+.quiz-intro{color:var(--text2);font-size:13px;margin-bottom:28px;line-height:1.7}
+.q-card{background:var(--surface);border-radius:var(--radius);padding:28px;border:1px solid var(--surface2);margin-bottom:14px}
+.q-tags{display:flex;gap:8px;margin-bottom:14px}
+.q-text{font-family:var(--serif);font-size:18px;line-height:1.4;margin-bottom:16px}
+.q-textarea{width:100%;min-height:110px;background:var(--surface2);border:1px solid transparent;border-radius:10px;padding:14px;color:var(--text);font-size:13px;line-height:1.7;resize:vertical;outline:none;transition:border-color .2s}
+.q-textarea:focus{border-color:rgba(240,192,64,.3)}
+.q-textarea::placeholder{color:var(--text3)}
+.reveal-btn{margin-top:12px;padding:8px 22px;border-radius:8px;font-size:13px;font-weight:500;transition:all .15s}
+.reveal-btn.closed{background:var(--surface2);border:1px solid var(--surface2);color:var(--text2)}
+.reveal-btn.closed:hover{border-color:var(--accent3);color:var(--accent3)}
+.reveal-btn.open{background:rgba(240,192,64,.1);border:1px solid var(--accent3);color:var(--accent3)}
+.model-box{margin-top:14px;padding:18px;background:rgba(240,192,64,.04);border-radius:10px;border:1px solid rgba(240,192,64,.1);font-size:13px;line-height:1.85}
+.model-label{font-size:10px;font-weight:700;color:var(--accent3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+
+@media(max-width:500px){
+  .hero h1{font-size:42px}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .rate-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-pills{gap:2px}
+  .nav-pill{padding:6px 12px;font-size:11px}
+}
+</style>
+</head>
+<body>
+<div class="app" id="app"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const FLASHCARDS = [
+  // ── LO2: Therapeutic Relationships ──
+  {id:1,lo:"LO2",topic:"Therapeutic Relationship",front:"What are the 4 components of the nurse-client relationship?",back:"Power — the nurse holds knowledge and authority the client does not.\n\nTrust — the client must feel safe in the nurse's care.\n\nRespect — valuing the client's dignity and individuality.\n\nProfessional Intimacy — access to personal and physical information about the client.\n\nThese four components are ALWAYS present, regardless of the length of the interaction."},
+  {id:2,lo:"LO2",topic:"Therapeutic Relationship",front:"How does a therapeutic relationship differ from a social relationship? Name at least 5 differences.",back:"1. PURPOSE: Therapeutic = improve client's health outcomes. Social = mutual enjoyment.\n\n2. TIMEFRAME: Therapeutic = defined start and end (begins with care, ends at discharge). Social = ongoing, open-ended.\n\n3. FOCUS: Therapeutic = client's needs ONLY. Social = both parties' needs.\n\n4. BOUNDARIES: Therapeutic = strict professional boundaries. Social = informal.\n\n5. CONFIDENTIALITY: Therapeutic = legally and ethically required. Social = varied.\n\n6. POWER: Therapeutic = nurse holds more power. Social = relatively equal."},
+  {id:3,lo:"LO2",topic:"Therapeutic Relationship",front:"When does the therapeutic relationship end?",back:"The therapeutic relationship ends when:\n• The nursing care plan goals have been met, OR\n• The patient is discharged.\n\nEven when a nurse provides care to the same patient over months or years (e.g. home care or long-term care), the relationship remains PROFESSIONALLY STRUCTURED.\n\nThe relationship ends when the therapeutic relationship ends — not when the nurse's feelings change."},
+
+  // ── LO2: Professional Boundaries ──
+  {id:4,lo:"LO2",topic:"Professional Boundaries",front:"Define professional boundaries. Who is responsible for maintaining them?",back:"Professional boundaries are the SPACES BETWEEN THE NURSE'S POWER AND THE CLIENT'S VULNERABILITY.\n\nThe NURSE is ALWAYS responsible for establishing and maintaining appropriate boundaries, REGARDLESS of how a client behaves.\n\nSome boundaries are clear-cut. Others are less clear and require professional judgement. The nurse must recognise when a relationship is slipping into the non-professional realm and take IMMEDIATE action."},
+  {id:5,lo:"LO2",topic:"Professional Boundaries",front:"What are the 3 zones of involvement? Describe each.",back:"1. UNDER-INVOLVEMENT: Task-focused only, emotionally absent. The nurse just 'does the job' without therapeutic engagement. Neglects holistic care and dehumanises the client.\n\n2. THERAPEUTIC ZONE (ideal): Emotionally present but objective. Active listening for cues. Client-centred, goal-directed care. This is where safe, effective nursing happens.\n\n3. OVER-INVOLVEMENT: Loss of objectivity and emotional entanglement. The nurse's personal feelings interfere with professional judgement. Compromises safe care."},
+  {id:6,lo:"LO2",topic:"Professional Boundaries",front:"Give 4 examples of UNDER-involvement in nursing.",back:"1. Delaying care or treatment (e.g. waiting to answer a call bell, delaying PRN medication unnecessarily)\n\n2. Taking shortcuts in care (e.g. neglecting hand-washing, skipping a dressing change)\n\n3. Blaming the client for lack of progress\n\n4. Using disrespectful, demeaning, insulting, or humiliating language or tone\n\nOther examples: being unnecessarily rough, inadequately draping during procedures, avoiding the client, withholding information needed for informed decisions."},
+  {id:7,lo:"LO2",topic:"Professional Boundaries",front:"Give 4 examples of OVER-involvement in nursing.",back:"1. Participating in personal conversations, flirtation, off-colour jokes, or sexual innuendo\n\n2. Feeling a sense of excitement, longing, romantic or sexual thoughts related to the client\n\n3. Hiding your relationship with the client from others\n\n4. Refusing to transfer care to another provider when therapeutically indicated\n\nOther examples: receiving feedback that behaviour is overly familiar or intrusive, sharing excessive personal information with the client."},
+
+  // ── LO2: Communication ──
+  {id:8,lo:"LO2",topic:"Communication",front:"Name the 7 bridges to a therapeutic relationship.",back:"1. RESPECT — being genuinely respectful\n2. CARING — use of knowledge and skill therapeutically\n3. EMPOWERMENT — helping a person take charge of their life\n4. TRUST — feeling safe in the nurse's care\n5. EMPATHY — understanding of the patient's feelings (not just sympathy)\n6. MUTUALITY — sharing in resolving the patient's health problem\n7. ETHICAL VALUES — veracity (truthfulness), confidentiality, justice, beneficence (doing good)"},
+  {id:9,lo:"LO2",topic:"Communication",front:"What is culturally unsafe communication?",back:"Culturally unsafe communication is any action that DIMINISHES, DEMEANS, OR DISEMPOWERS the cultural identity and well-being of an individual (NCNZ, 1992).\n\nThis includes both verbal and non-verbal communication. It can include:\n• Dismissing cultural practices\n• Making assumptions based on stereotypes\n• Failing to use interpreters when needed\n• Ignoring spiritual or cultural needs\n• Using jargon without explanation\n\nThis definition applies to ALL communication, not just face-to-face — including online and written communication."},
+  {id:10,lo:"LO2",topic:"Communication",front:"What does the Duty of Confidentiality mean in professional communication?",back:"A nurse must PROTECT ALL PRIVATE INFORMATION about a health consumer and only share it when:\n\n1. NECESSARY FOR CARE — only on a 'need-to-know' basis with other health professionals involved in the person's care\n\n2. REQUIRED BY LAW\n\nIn practice this means:\n• Keep ALL patient information private\n• Be careful about WHERE you discuss patients — NOT in hallways, lifts, cafeterias, or online\n• Communicate respectfully and securely\n• Follow the Code of Conduct, Privacy Act, and Health Information Privacy Code"},
+
+  // ── LO2: Cultural Safety ──
+  {id:11,lo:"LO2",topic:"Cultural Safety",front:"Define cultural safety. Who determines whether care is culturally safe?",back:"Cultural safety is the EFFECTIVE NURSING PRACTICE of a person or family from another culture, that is DETERMINED BY THAT PERSON OR FAMILY (Ramsden, 2002).\n\nAn unsafe cultural practice is any action that DEMEANS the cultural identity of a particular person or family.\n\nKey point: Cultural safety is an OUTCOME — it is defined by the RECIPIENT of care, NOT by the nurse.\n\nIt requires working from the cultural perspective of the OTHER person, not from your own perspective."},
+  {id:12,lo:"LO2",topic:"Cultural Safety",front:"What does cultural safety require of a nurse? List 5 things.",back:"1. Work from the CULTURAL PERSPECTIVE OF THE OTHER PERSON, not your own\n\n2. REFLECT on your own biases, assumptions, and cultural lens\n\n3. ASK the person (or their whānau/representatives) what they prefer, then meet those preferences wherever possible\n\n4. Try to UNDERSTAND the person's history by talking to them and their family\n\n5. ASK QUESTIONS if you are unsure — this is respectful, not intrusive\n\nAlso: Challenge racism and discrimination in the delivery of healthcare."},
+  {id:13,lo:"LO2",topic:"Cultural Safety",front:"What is kawa whakaruruhau and how does it differ from whakapapa-centred care?",back:"KAWA WHAKARURUHAU = cultural safety in the Māori context. It ensures care is respectful and responsive to the cultural needs and identities of Māori. It means providing an environment where Māori feel safe, respected, and understood, without fear of discrimination. Requires nurses to reflect on their OWN discrimination and bias.\n\nWHAKAPAPA-CENTRED CARE = care that acknowledges a person's heritage, family connections, and identity. It goes BEYOND treating physical symptoms to incorporate a deeper understanding of the individual's background, values, and relationships, particularly for Māori. Emphasises connections to family and ancestors as central to well-being."},
+  {id:14,lo:"LO2",topic:"Cultural Safety",front:"How does Te Tiriti o Waitangi relate to nursing practice? What must nurses do?",back:"Te Tiriti o Waitangi provides the FOUNDATION for working in partnership with Māori to address health inequities and support safe, effective care.\n\nThe NCNZ standards of competence integrate Te Tiriti's articles and principles.\n\nUnder POU ONE (Māori Health), nurses must:\n1. Engage in ongoing professional development related to Māori health and Te Tiriti\n2. Advocate for health equity for Māori in ALL situations\n3. Understand the impact of social determinants (including colonisation) on health\n4. Use te reo and incorporate tikanga Māori into practice where appropriate"},
+
+  // ── LO2: Self-Reflection & Competencies ──
+  {id:15,lo:"LO2",topic:"Self-Reflection",front:"Why is self-reflection important in NZ nursing? Give 5 reasons.",back:"1. SUPPORTS SAFE, ACCOUNTABLE PRACTICE — helps recognise strengths and limitations, ensuring practice within competence\n\n2. IMPROVES QUALITY OF CARE — refines clinical skills, communication, and decision-making\n\n3. ENHANCES CULTURAL SAFETY — helps examine own biases, assumptions, and cultural lens (essential for upholding mana and respecting diversity)\n\n4. STRENGTHENS PROFESSIONAL IDENTITY — part of ongoing professional development; helps understand how values and experiences shape practice\n\n5. SUPPORTS ETHICAL, COMPASSIONATE CARE — encourages empathy, emotional awareness, and integrity (key Code of Conduct values)\n\nSelf-reflection is a CORE professional requirement in Aotearoa."},
+  {id:16,lo:"LO2",topic:"Competencies",front:"What are the first two pou of the NCNZ RN competencies? List their descriptors.",back:"POU ONE — MĀORI HEALTH:\n1.1 Engages in ongoing PD related to Māori health and Te Tiriti\n1.2 Advocates for health equity for Māori in all situations\n1.3 Understands the impact of social determinants (e.g. colonisation) on health\n1.4 Uses te reo and incorporates tikanga Māori where appropriate\n\nPOU TWO — CULTURAL SAFETY:\n2.1 Practises culturally safe care determined by the recipient\n2.2 Challenges racism and discrimination in healthcare delivery\n2.3 Engages in partnership with individuals, whānau, and communities\n2.4 Advocates by including cultural, spiritual, physical, and mental health\n2.5 Contributes to collaborative team culture respecting diversity"},
+
+  // ── LO4: Legislation ──
+  {id:17,lo:"LO4",topic:"Legislation",front:"What is the HPCAA 2003 and what does it require?",back:"HEALTH PRACTITIONERS COMPETENCE ASSURANCE ACT 2003\n\n• The OVERARCHING LAW governing ALL health professions in NZ\n• Requires the Nursing Council to set standards of competence and codes of conduct (under section 118(i))\n• Purpose: to PROTECT THE HEALTH AND SAFETY OF THE PUBLIC\n\nThe NCNZ Code of Conduct outlines the standards of ethical conduct set by the Nursing Council under this Act."},
+  {id:18,lo:"LO4",topic:"Legislation",front:"Name 6 key pieces of legislation relevant to NZ nursing.",back:"1. HPCAA 2003 — governs all health professions, establishes NCNZ authority\n\n2. PRIVACY ACT — protects personal information\n\n3. HEALTH INFORMATION PRIVACY CODE — specific rules for health information\n\n4. CODE OF HEALTH & DISABILITY SERVICES CONSUMERS' RIGHTS (HDC Code) — 10 rights of health consumers\n\n5. HARMFUL DIGITAL COMMUNICATIONS ACT 2015 — relevant to social media conduct\n\n6. EMPLOYMENT RELATIONS ACT 2000 — relevant to nurses' rights and obligations (including online expression)"},
+  {id:19,lo:"LO4",topic:"HDC Code",front:"List ALL 10 rights of health consumers under the HDC Code.",back:"1. Right to be treated with RESPECT\n2. Right to freedom from DISCRIMINATION, coercion, harassment, and exploitation\n3. Right to DIGNITY and independence\n4. Right to services of an APPROPRIATE STANDARD\n5. Right to EFFECTIVE COMMUNICATION\n6. Right to be FULLY INFORMED\n7. Right to make an INFORMED CHOICE and give informed consent\n8. Right to SUPPORT\n9. Rights in respect of TEACHING or RESEARCH\n10. Right to COMPLAIN\n\nShort-answer tip: Link these to scenarios. E.g. Right 5 connects to cultural safety and interpreters."},
+
+  // ── LO4: NCNZ vs NZNO ──
+  {id:20,lo:"LO4",topic:"NCNZ vs NZNO",front:"What is the difference between NCNZ and NZNO?",back:"NCNZ (NURSING COUNCIL OF NEW ZEALAND):\n• Regulatory body (statutory authority under HPCAA 2003)\n• Purpose: PROTECT THE PUBLIC\n• Sets: Code of Conduct, competencies, scopes of practice\n• Power: can register, discipline, and deregister nurses\n\nNZNO (NZ NURSES ORGANISATION):\n• Professional body AND union\n• Purpose: ADVOCATE FOR NURSES\n• Publishes: Code of Ethics, standards of practice\n• Membership is VOLUNTARY\n\nMemory aid: NCNZ = protects PUBLIC. NZNO = supports NURSES."},
+
+  // ── LO4: Code of Conduct ──
+  {id:21,lo:"LO4",topic:"Code of Conduct",front:"What are the 4 core VALUES of the NCNZ Code of Conduct? Explain each.",back:"1. RESPECT — valuing the dignity, privacy, and individuality of every health consumer\n\n2. TRUST — acting in ways that maintain the public's confidence in nurses and the profession\n\n3. PARTNERSHIP — working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care\n\n4. INTEGRITY — being honest, accountable, and acting ethically in all professional interactions\n\nThese four values underpin the eight principles of the Code."},
+  {id:22,lo:"LO4",topic:"Code of Conduct",front:"List ALL 8 principles of the NCNZ Code of Conduct.",back:"1. Respect the DIGNITY and INDIVIDUALITY of health consumers\n2. Respect the CULTURAL NEEDS and VALUES of health consumers\n3. Work in PARTNERSHIP with health consumers to promote and protect their WELL-BEING\n4. Maintain health consumer trust by providing SAFE and COMPETENT care\n5. Respect health consumers' PRIVACY and CONFIDENTIALITY\n6. Work RESPECTFULLY WITH COLLEAGUES to best meet health consumers' needs\n7. Act with INTEGRITY to justify health consumers' trust\n8. Maintain PUBLIC TRUST and confidence in the nursing profession\n\nMemory: 1-3 = Respect & Partnership | 4 = Safe care | 5 = Privacy | 6 = Colleagues | 7-8 = Integrity & Trust"},
+  {id:23,lo:"LO4",topic:"Code of Conduct",front:"What are the 3 supporting guidelines published by NCNZ alongside the Code?",back:"1. CODE OF CONDUCT (2012) — core standards of ethical conduct\n\n2. GUIDELINES: PROFESSIONAL BOUNDARIES (2012) — detailed guidance on maintaining appropriate nurse-client boundaries\n\n3. GUIDELINES: SOCIAL MEDIA & ELECTRONIC COMMUNICATION (2012) — guidance on online conduct\n\nAll three are established under section 118(i) of the HPCAA 2003.\n\nOf the 8 Code principles, FOUR directly intersect with social media and electronic communication."},
+
+  // ── LO4: Social Media ──
+  {id:24,lo:"LO4",topic:"Social Media",front:"Why must nurses maintain professional boundaries on social media? Give 4 reasons.",back:"1. PROTECT PATIENT PRIVACY & CONFIDENTIALITY — anything posted can spread quickly and permanently. Even vague comments can unintentionally identify a patient or breach the Privacy Act.\n\n2. UPHOLD PUBLIC TRUST — unprofessional posts (even on 'private' accounts) damage confidence in the profession. Nurses are ALWAYS seen as nurses, on and off duty.\n\n3. AVOID BLURRING ROLES — connecting with patients online (e.g. 'friending' them) creates dual relationships, risking over-involvement, favouritism, or inappropriate familiarity.\n\n4. MAINTAIN SAFE, ETHICAL, CULTURALLY RESPECTFUL PRACTICE — posts can be misinterpreted or cause harm."},
+  {id:25,lo:"LO4",topic:"Social Media",front:"Name 6 key rules from the NZNO 2019 social media guidelines.",back:"1. You have an ethical and LEGAL responsibility to maintain patient privacy and confidentiality at ALL times\n\n2. NEVER transmit information or images related to client care under any circumstances\n\n3. Passwords are NOT foolproof — 'private' does not mean secure\n\n4. Do NOT publish anything that could identify a patient (including rare diagnoses)\n\n5. Maintain CONFIDENTIALITY of the organisation where you work\n\n6. NEVER post photos without the express permission of the person/people in them\n\nAlso: Deleted content may remain accessible. Once online, information is almost impossible to completely remove."},
+  {id:26,lo:"LO4",topic:"Social Media",front:"Give an example of real-world consequences for social media misconduct in nursing.",back:"EXAMPLE 1: A nurse was struck off the register after a Facebook connection with a patient/client (Nursing Standard, 2010).\n\nEXAMPLE 2: Canadian nurse Carolyn Strom was disciplined and fined $26,000 by the Saskatchewan Registered Nurses Association after a 2015 Facebook post criticising the end-of-life care her grandfather received. She was on parental leave and posted on her personal page. Her appeal in 2018 was denied.\n\nKey lesson: Even well-intentioned posts about care can result in professional misconduct findings. The duty to maintain standards applies at ALL times."},
+
+  // ── LO4: Competence ──
+  {id:27,lo:"LO4",topic:"Competence",front:"What should a nurse do if asked to perform a task beyond their competence? List 5 steps.",back:"1. SPEAK UP EARLY — clearly state you don't feel competent or confident (prevents unsafe practice, shows accountability)\n\n2. EXPLAIN PROFESSIONALLY — 'I haven't been trained, assessed, or supervised in this skill yet' (aligns with integrity)\n\n3. SEEK SUPPORT — ask for supervision while performing the task, additional teaching, or opportunity to observe first\n\n4. ENSURE SAFE CARE — if you can't perform safely, make sure a competent nurse or clinician takes over (protects the patient, meets legal/ethical obligations)\n\n5. REFLECT & PLAN — arrange training or practice afterward to develop the skill (supports ongoing professional development)\n\nLinks to PRINCIPLE 4 (safe, competent care) and the value of INTEGRITY."},
+  {id:28,lo:"LO4",topic:"Professionalism",front:"What is professionalism in nursing?",back:"Professionalism is demonstrating the PROFESSIONAL, LEGAL, AND ETHICAL STANDARDS required in practice.\n\nThis includes the knowledge, skills, values, and attributes expected of the nursing profession.\n\nKey characteristics:\n• Extended education and evidence-based knowledge\n• Professional practice governed by NCNZ\n• Autonomy in decision-making within scope of practice\n• Provides a specific and needed service to society\n• Governed by a Code of Ethics\n\nProfessionalism is maintained through ongoing competence, self-reflection, and adherence to the Code of Conduct."},
+];
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// STUDY SECTIONS (full detail from study guide)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const STUDY_SECTIONS = [
+  {id:"therapeutic",title:"Therapeutic Relationships",lo:"LO2",html:`
+<h3>The Therapeutic Relationship</h3>
+<p>The therapeutic relationship is the professional nurse-client relationship. It is fundamentally different from a social relationship.</p>
+
+<h4>Key characteristics</h4>
+<ul>
+  <li><strong>Defined timeframe</strong> — begins when care starts and ends when goals are met or the client is discharged</li>
+  <li><strong>Goal-directed</strong> — purpose is improving the client's health outcomes</li>
+  <li><strong>High expectation of confidentiality</strong> — legally and ethically required</li>
+  <li><strong>Client's needs come first</strong> — the nurse's personal needs are always secondary</li>
+  <li><strong>Professional boundaries</strong> — the nurse is always responsible for maintaining them</li>
+  <li><strong>Power imbalance</strong> — the nurse holds knowledge, authority, and access to personal information</li>
+</ul>
+
+<h4>Four Components (always present)</h4>
+<ul>
+  <li><strong>Power</strong> — the nurse has knowledge and authority the client does not</li>
+  <li><strong>Trust</strong> — the client must feel safe in the nurse's care</li>
+  <li><strong>Respect</strong> — valuing the client's dignity and individuality</li>
+  <li><strong>Professional Intimacy</strong> — access to personal and physical information</li>
+</ul>
+
+<h4>Therapeutic vs Social Relationship</h4>
+<table>
+  <tr><th>Feature</th><th>Social Relationship</th><th>Therapeutic Relationship</th></tr>
+  <tr><td>Purpose</td><td>Mutual enjoyment</td><td>Client health outcomes</td></tr>
+  <tr><td>Timeframe</td><td>Ongoing, open-ended</td><td>Defined start and end</td></tr>
+  <tr><td>Focus</td><td>Both parties' needs</td><td>Client's needs only</td></tr>
+  <tr><td>Boundaries</td><td>Informal</td><td>Strict professional boundaries</td></tr>
+  <tr><td>Confidentiality</td><td>Varied</td><td>Legally and ethically required</td></tr>
+  <tr><td>Power</td><td>Relatively equal</td><td>Nurse holds more power</td></tr>
+</table>
+
+<div class="warn">⚠️ <strong>Short-answer tip:</strong> If asked to differentiate, always mention: purpose, timeframe, power imbalance, whose needs come first, and confidentiality.</div>
+`},
+
+  {id:"boundaries",title:"Professional Boundaries",lo:"LO2",html:`
+<h3>Definition</h3>
+<p>Professional boundaries are the <strong>spaces between the nurse's power and the client's vulnerability</strong>.</p>
+
+<div class="highlight"><strong>Key rule:</strong> The nurse is ALWAYS responsible for establishing and maintaining boundaries, regardless of how a client behaves. The relationship ends when the therapeutic relationship ends.</div>
+
+<h4>Three Zones of Involvement</h4>
+<table>
+  <tr><th>Zone</th><th>Description</th><th>Problem</th></tr>
+  <tr><td>Under-involvement</td><td>Task-focused only, emotionally absent</td><td>Neglects holistic care, dehumanises the client</td></tr>
+  <tr><td>Therapeutic zone ✓</td><td>Emotionally present but objective, active listening</td><td>This is the IDEAL</td></tr>
+  <tr><td>Over-involvement</td><td>Loss of objectivity, emotional entanglement</td><td>Compromises safe care and judgement</td></tr>
+</table>
+
+<h4>Examples of Under-Involvement</h4>
+<ul>
+  <li>Delaying care (e.g. not answering a call bell, delaying PRN medication)</li>
+  <li>Taking shortcuts (e.g. skipping hand-washing or a dressing change)</li>
+  <li>Blaming the client for lack of progress</li>
+  <li>Using disrespectful, demeaning, insulting, or humiliating language or tone</li>
+  <li>Being unnecessarily rough when providing care</li>
+  <li>Inadequately draping a client during a procedure</li>
+  <li>Avoiding the client to a degree that interferes with care</li>
+  <li>Withholding information the client needs for informed decisions</li>
+</ul>
+
+<h4>Examples of Over-Involvement</h4>
+<ul>
+  <li>Engaging in personal conversations, flirtation, off-colour jokes, or sexual innuendo</li>
+  <li>Feeling excitement, longing, romantic or sexual thoughts about a client</li>
+  <li>Hiding your relationship with the client from others</li>
+  <li>Receiving feedback that your behaviour is overly familiar or intrusive</li>
+  <li>Refusing to transfer care when therapeutically indicated</li>
+  <li>Sharing excessive personal information with the client</li>
+</ul>
+
+<div class="warn">⚠️ <strong>Short-answer tip:</strong> Always give specific examples and link them back to the Code of Conduct values (respect, trust, partnership, integrity).</div>
+`},
+
+  {id:"communication",title:"Communication & Confidentiality",lo:"LO2",html:`
+<h3>Bridges to Therapeutic Communication</h3>
+<ul>
+  <li><strong>Respect</strong> — being genuinely respectful</li>
+  <li><strong>Caring</strong> — using knowledge and skill therapeutically</li>
+  <li><strong>Empowerment</strong> — helping the person take charge of their own life</li>
+  <li><strong>Trust</strong> — ensuring the client feels safe</li>
+  <li><strong>Empathy</strong> — understanding the client's feelings (not just sympathy)</li>
+  <li><strong>Mutuality</strong> — sharing in resolving the client's health concerns</li>
+  <li><strong>Ethical values</strong> — veracity (truthfulness), confidentiality, justice, beneficence (doing good)</li>
+</ul>
+
+<h3>Barriers to Communication</h3>
+<ul>
+  <li>Culturally unsafe communication (any action that diminishes cultural identity)</li>
+  <li>Judgemental or dismissive language</li>
+  <li>Not listening actively</li>
+  <li>Breach of confidentiality</li>
+  <li>Ignoring non-verbal cues</li>
+  <li>Physical environment issues (discussing care in hallways, lifts, etc.)</li>
+  <li>Using jargon without explanation</li>
+</ul>
+
+<h3>Duty of Confidentiality</h3>
+<p>A nurse must <strong>protect ALL private information</strong> about a health consumer and only share it when necessary for care or required by law.</p>
+<ul>
+  <li>Keep all patient information private — anything learned through your role must NOT be shared with uninvolved parties</li>
+  <li>Share only on a <strong>"need-to-know" basis</strong> with other health professionals involved in care</li>
+  <li>Communicate <strong>respectfully and securely</strong> — NOT in hallways, lifts, cafeterias, or online</li>
+  <li>Follow the <strong>Code of Conduct, Privacy Act, and Health Information Privacy Code</strong></li>
+</ul>
+
+<h3>Self-Reflection</h3>
+<p>Self-reflection is a <strong>core professional requirement</strong> in NZ nursing. It helps nurses:</p>
+<ul>
+  <li>Recognise strengths and limitations → practise within competence</li>
+  <li>Improve clinical skills, communication, and decision-making</li>
+  <li>Examine biases and assumptions → enhance cultural safety</li>
+  <li>Strengthen professional identity through ongoing development</li>
+  <li>Encourage empathy, emotional awareness, and integrity</li>
+</ul>
+`},
+
+  {id:"cultural",title:"Cultural Safety & Te Tiriti",lo:"LO2",html:`
+<h3>What Is Cultural Safety?</h3>
+<p>Cultural safety is the <strong>effective nursing practice</strong> of a person or family from another culture, <strong>as determined by that person or family</strong> (Ramsden, 2002).</p>
+
+<div class="highlight"><strong>Key point:</strong> Cultural safety is an OUTCOME — it is defined by the RECIPIENT of care, not by the nurse. An unsafe cultural practice is any action that diminishes, demeans, or disempowers someone's cultural identity.</div>
+
+<h4>What Cultural Safety Requires of a Nurse</h4>
+<ul>
+  <li>Work from the <strong>cultural perspective of the other person</strong>, not your own</li>
+  <li>Reflect on your <strong>own biases, assumptions, and cultural lens</strong></li>
+  <li>Ask the person (or their whānau/representatives) what they prefer, then meet those preferences</li>
+  <li>Try to understand the person's history by talking to them and their family</li>
+  <li>Ask questions when unsure — this is respectful, not intrusive</li>
+  <li>Challenge racism and discrimination in healthcare delivery</li>
+</ul>
+
+<h3>Te Tiriti o Waitangi and Nursing</h3>
+<p>Te Tiriti provides the <strong>foundation for working in partnership with Māori</strong> to address health inequities. The NCNZ competencies integrate its articles and principles.</p>
+
+<h4>Pou One — Māori Health (descriptors)</h4>
+<ul>
+  <li>1.1 Engage in ongoing PD on Māori health and Te Tiriti</li>
+  <li>1.2 Advocate for health equity for Māori in all situations</li>
+  <li>1.3 Understand the impact of social determinants (colonisation) on health</li>
+  <li>1.4 Use te reo and incorporate tikanga Māori where appropriate</li>
+</ul>
+
+<h4>Pou Two — Cultural Safety (descriptors)</h4>
+<ul>
+  <li>2.1 Practise culturally safe care determined by the recipient</li>
+  <li>2.2 Challenge racism and discrimination in healthcare</li>
+  <li>2.3 Engage in partnership with individuals, whānau, and communities</li>
+  <li>2.4 Advocate by including cultural, spiritual, physical, and mental health</li>
+  <li>2.5 Contribute to collaborative team culture respecting diversity</li>
+</ul>
+
+<h3>Key Terms</h3>
+<table>
+  <tr><th>Concept</th><th>Meaning</th></tr>
+  <tr><td>Kawa whakaruruhau</td><td>Cultural safety in the Māori context — ensuring care is respectful, responsive, and free from discrimination for Māori. Requires nurses to reflect on their own biases.</td></tr>
+  <tr><td>Whakapapa-centred care</td><td>Care that acknowledges heritage, family connections, and identity. Goes beyond physical symptoms to incorporate the individual's background, values, and relationships.</td></tr>
+</table>
+`},
+
+  {id:"legislation",title:"Legislation & HPCAA",lo:"LO4",html:`
+<h3>Health Practitioners Competence Assurance Act (HPCAA) 2003</h3>
+<ul>
+  <li>The <strong>overarching law</strong> governing ALL health professions in NZ</li>
+  <li>Requires the Nursing Council to set standards of competence and codes of conduct under <strong>section 118(i)</strong></li>
+  <li>Purpose: to <strong>protect the health and safety of the public</strong></li>
+</ul>
+
+<h3>Other Key Legislation</h3>
+<table>
+  <tr><th>Law</th><th>Relevance</th></tr>
+  <tr><td>Privacy Act</td><td>Protects personal information</td></tr>
+  <tr><td>Health Information Privacy Code</td><td>Specific rules for health information</td></tr>
+  <tr><td>HDC Code (Code of Health & Disability Services Consumers' Rights)</td><td>10 rights of health consumers</td></tr>
+  <tr><td>Harmful Digital Communications Act 2015</td><td>Social media conduct</td></tr>
+  <tr><td>Employment Relations Act 2000</td><td>Nurses' rights and obligations online</td></tr>
+</table>
+
+<h3>HDC Code — 10 Rights of Health Consumers</h3>
+<ul>
+  <li><strong>Right 1</strong> — Right to be treated with respect</li>
+  <li><strong>Right 2</strong> — Right to freedom from discrimination, coercion, harassment, and exploitation</li>
+  <li><strong>Right 3</strong> — Right to dignity and independence</li>
+  <li><strong>Right 4</strong> — Right to services of an appropriate standard</li>
+  <li><strong>Right 5</strong> — Right to effective communication</li>
+  <li><strong>Right 6</strong> — Right to be fully informed</li>
+  <li><strong>Right 7</strong> — Right to make an informed choice and give informed consent</li>
+  <li><strong>Right 8</strong> — Right to support</li>
+  <li><strong>Right 9</strong> — Rights in respect of teaching or research</li>
+  <li><strong>Right 10</strong> — Right to complain</li>
+</ul>
+
+<div class="warn">⚠️ <strong>Short-answer tip:</strong> Link these rights to scenarios. E.g. Right 5 (effective communication) connects to culturally safe practice and using interpreters.</div>
+`},
+
+  {id:"code",title:"NCNZ Code of Conduct",lo:"LO4",html:`
+<h3>Four Core Values</h3>
+<ul>
+  <li><strong>Respect</strong> — valuing dignity, privacy, and individuality</li>
+  <li><strong>Trust</strong> — acting in ways that maintain public confidence</li>
+  <li><strong>Partnership</strong> — working alongside consumers, whānau, and communities for shared decision-making</li>
+  <li><strong>Integrity</strong> — being honest, accountable, and ethical</li>
+</ul>
+
+<h3>Eight Principles</h3>
+<table>
+  <tr><th>#</th><th>Principle</th></tr>
+  <tr><td>1</td><td>Respect the <strong>dignity and individuality</strong> of health consumers</td></tr>
+  <tr><td>2</td><td>Respect the <strong>cultural needs and values</strong> of health consumers</td></tr>
+  <tr><td>3</td><td>Work in <strong>partnership</strong> with health consumers to promote and protect their <strong>well-being</strong></td></tr>
+  <tr><td>4</td><td>Maintain health consumer trust by providing <strong>safe and competent care</strong></td></tr>
+  <tr><td>5</td><td>Respect health consumers' <strong>privacy and confidentiality</strong></td></tr>
+  <tr><td>6</td><td>Work <strong>respectfully with colleagues</strong> to best meet health consumers' needs</td></tr>
+  <tr><td>7</td><td>Act with <strong>integrity</strong> to justify health consumers' trust</td></tr>
+  <tr><td>8</td><td>Maintain <strong>public trust and confidence</strong> in the nursing profession</td></tr>
+</table>
+
+<div class="memory-aid">💡 <strong>Memory aid:</strong> Principles 1–3 = Respect & Partnership · Principle 4 = Safe care · Principle 5 = Privacy · Principle 6 = Colleagues · Principles 7–8 = Integrity & Public trust</div>
+
+<h3>NCNZ vs NZNO</h3>
+<table>
+  <tr><th>Feature</th><th>NCNZ (Nursing Council)</th><th>NZNO (Nurses Organisation)</th></tr>
+  <tr><td>Type</td><td>Regulatory body (statutory authority)</td><td>Professional body and union</td></tr>
+  <tr><td>Purpose</td><td>Protect the PUBLIC</td><td>Advocate for NURSES</td></tr>
+  <tr><td>Sets</td><td>Code of Conduct, competencies, scopes of practice</td><td>Code of Ethics, standards of practice</td></tr>
+  <tr><td>Power</td><td>Can register, discipline, and deregister nurses</td><td>Supports nurses' employment rights</td></tr>
+  <tr><td>Established by</td><td>HPCAA 2003</td><td>Voluntary membership</td></tr>
+</table>
+
+<h3>Three Supporting Guidelines from NCNZ</h3>
+<ul>
+  <li>Code of Conduct (2012)</li>
+  <li>Guidelines: Professional Boundaries (2012)</li>
+  <li>Guidelines: Social Media and Electronic Communication (2012)</li>
+</ul>
+`},
+
+  {id:"social",title:"Social Media & Competence",lo:"LO4",html:`
+<h3>Why Maintain Boundaries on Social Media?</h3>
+<ul>
+  <li><strong>Protect patient privacy & confidentiality</strong> — posts spread quickly and permanently; even vague comments can identify a patient or breach the Privacy Act and Code of Conduct</li>
+  <li><strong>Uphold public trust</strong> — unprofessional posts (even on "private" accounts) damage confidence in the profession. Nurses are ALWAYS seen as nurses, on and off duty</li>
+  <li><strong>Avoid blurring personal and professional roles</strong> — "friending" patients creates dual relationships, risking over-involvement, favouritism, or inappropriate familiarity</li>
+  <li><strong>Maintain safe, ethical, culturally respectful practice</strong> — posts can be misinterpreted or cause harm</li>
+</ul>
+
+<h3>Key Social Media Rules (NZNO 2019 Guidelines)</h3>
+<ul>
+  <li>You have an ethical and <strong>legal responsibility</strong> to maintain patient privacy and confidentiality at ALL times</li>
+  <li><strong>NEVER</strong> transmit information or images related to client care under any circumstances</li>
+  <li>Passwords are <strong>NOT foolproof</strong> — "private" does not mean secure</li>
+  <li>Do NOT publish anything that could <strong>identify a patient</strong> (including rare diagnoses)</li>
+  <li>Maintain <strong>confidentiality of the organisation</strong> where you work</li>
+  <li><strong>NEVER post photos</strong> without the express permission of the people in them</li>
+  <li>Once online, information is <strong>almost impossible to completely remove</strong></li>
+  <li>Deleted content may <strong>remain accessible</strong></li>
+</ul>
+
+<div class="highlight"><strong>Real-world consequences:</strong> A Canadian nurse (Carolyn Strom) was fined $26,000 for a Facebook post criticising care her grandfather received — even though she was on parental leave and posted on her personal page. Her appeal was denied. A nurse in the UK was struck off the register for a Facebook connection with a patient.</div>
+
+<h3>Responding to Tasks Beyond Your Competence</h3>
+<p>If asked to perform a task you don't feel competent to do:</p>
+<ul>
+  <li><strong>1. Speak up early</strong> — clearly state you don't feel competent or confident</li>
+  <li><strong>2. Explain professionally</strong> — "I haven't been trained, assessed, or supervised in this skill"</li>
+  <li><strong>3. Seek support</strong> — ask for supervision, additional teaching, or to observe first</li>
+  <li><strong>4. Ensure safe care</strong> — make sure a competent clinician takes over</li>
+  <li><strong>5. Reflect and plan</strong> — arrange training to develop the skill afterward</li>
+</ul>
+<p>Links to <strong>Principle 4</strong> (safe, competent care) and the value of <strong>integrity</strong>.</p>
+
+<h3>What is Professionalism?</h3>
+<p>Professionalism is demonstrating the professional, legal, and ethical standards required in practice. It includes knowledge, skills, values, and attributes expected of the nursing profession.</p>
+<ul>
+  <li>Extended education and evidence-based knowledge</li>
+  <li>Professional practice governed by NCNZ</li>
+  <li>Autonomy in decision-making within scope of practice</li>
+  <li>Provides a specific and needed service to society</li>
+  <li>Governed by a Code of Ethics</li>
+</ul>
+`},
+];
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// QUIZ QUESTIONS (comprehensive model answers)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const QUIZ = [
+  {id:1,lo:"LO2",q:"What are the four core values of the NCNZ Code of Conduct? Briefly explain each.",model:"The four core values are: Respect (valuing dignity, privacy, and individuality of every health consumer), Trust (acting in ways that maintain the public's confidence in nurses and the profession), Partnership (working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care), and Integrity (being honest, accountable, and acting ethically in all professional interactions). These values underpin the eight principles of the Code and guide all aspects of nursing conduct in Aotearoa New Zealand."},
+  {id:2,lo:"LO2",q:"Explain the difference between a therapeutic relationship and a social relationship.",model:"A therapeutic relationship is goal-directed, focused on improving the client's health outcomes, and has a defined timeframe — it begins with the start of care and ends at discharge or when care goals are met. The client's needs always take priority over the nurse's, there is a strict expectation of confidentiality that is legally and ethically required, and a power imbalance exists because the nurse holds knowledge and authority. A social relationship, in contrast, is mutual and ongoing, exists for both parties' enjoyment, has no formal boundaries or power imbalance, and confidentiality expectations are informal. The nurse is always responsible for maintaining professional boundaries in the therapeutic relationship to ensure safe, ethical care."},
+  {id:3,lo:"LO2",q:"What are professional boundaries and why are they important?",model:"Professional boundaries are the spaces between the nurse's power and the client's vulnerability. They are essential because the nurse holds a position of power and trust — power through knowledge, access to personal information, and authority over aspects of care. Without clear boundaries, there is a risk of over-involvement (losing objectivity, developing personal attachments that compromise judgement) or under-involvement (being emotionally absent, cutting corners in care, dehumanising the client). The nurse is ALWAYS responsible for maintaining these boundaries, regardless of how the client behaves. This protects the client's safety, upholds the Code of Conduct values of respect and trust, and maintains public confidence in the profession. The nurse must recognise when a relationship is slipping into the non-professional realm and take immediate action."},
+  {id:4,lo:"LO2",q:"What is cultural safety and how does it differ from cultural awareness? How is it determined?",model:"Cultural safety is the effective nursing practice of a person from another culture, as determined by that person or family (Ramsden, 2002). It goes beyond cultural awareness (simply knowing that cultural differences exist) and cultural sensitivity (being respectful of differences) by requiring the nurse to critically reflect on their own biases, assumptions, and power dynamics. Cultural safety is an OUTCOME defined by the RECIPIENT of care — the patient or whānau decides whether the care was culturally safe, not the nurse. It requires working from the cultural perspective of the other person, not your own. It is linked to Te Tiriti o Waitangi and requires nurses to challenge racism and discrimination, advocate for health equity, and ensure care does not diminish or demean cultural identity."},
+  {id:5,lo:"LO2",q:"How does Te Tiriti o Waitangi relate to nursing practice? What are the NCNZ competency requirements?",model:"Te Tiriti o Waitangi provides the foundation for working in partnership with Māori to address health inequities and support safe, effective care. The NCNZ standards of competence integrate its articles and principles. Under Pou One (Māori Health), registered nurses must: engage in ongoing professional development on Māori health and Te Tiriti (1.1), advocate for health equity for Māori in all situations (1.2), understand the impact of social determinants including colonisation on health and wellbeing (1.3), and use te reo and incorporate tikanga Māori where appropriate (1.4). Kawa whakaruruhau (cultural safety in the Māori context) requires nurses to ensure care is respectful, responsive, and provided in an environment where Māori feel safe without fear of discrimination."},
+  {id:6,lo:"LO2",q:"Give two examples of over-involvement and two examples of under-involvement. Explain why both extremes are harmful.",model:"Over-involvement examples: (1) Engaging in personal conversations, flirtation, or sexual innuendo with a client, and (2) refusing to transfer care to another provider when therapeutically indicated. Under-involvement examples: (1) Delaying answering a call bell or administering PRN medication unnecessarily, and (2) using disrespectful, demeaning, or humiliating language toward a client. Both extremes compromise safe care. Over-involvement leads to loss of objectivity, meaning the nurse can no longer make sound clinical judgements — their personal feelings interfere with professional decision-making. Under-involvement fails to meet the client's holistic care needs and dehumanises them, reducing care to task completion. The ideal is the therapeutic zone, where the nurse is emotionally present and actively listening, but remains objective."},
+  {id:7,lo:"LO4",q:"What is the HPCAA 2003 and how does it relate to the NCNZ Code of Conduct?",model:"The Health Practitioners Competence Assurance Act 2003 (HPCAA) is the overarching law governing ALL health professions in New Zealand. Its purpose is to protect the health and safety of the public. Under section 118(i) of the HPCAA, the Nursing Council of New Zealand (NCNZ) is required to set standards of competence and ethical conduct for nurses. The NCNZ Code of Conduct outlines the standards of behaviour that nurses are expected to uphold in their professional practice, framed around four core values (respect, trust, partnership, integrity) and eight principles. The Code serves both to advise nurses and to tell the public what they can expect from a nurse."},
+  {id:8,lo:"LO4",q:"What is the difference between NCNZ and NZNO?",model:"NCNZ (Nursing Council of New Zealand) is the regulatory authority established under the HPCAA 2003, and its primary purpose is to protect the health and safety of the public. It sets standards of competence, scopes of practice, and the Code of Conduct, and has the power to register, discipline, and deregister nurses. NZNO (New Zealand Nurses Organisation) is a professional body and union that advocates for nurses' employment rights and professional interests. It publishes the Code of Ethics and standards of practice, and membership is voluntary. In short: NCNZ protects the public; NZNO supports nurses. Both organisations set professional standards, but only NCNZ has regulatory and disciplinary authority."},
+  {id:9,lo:"LO4",q:"Name four principles of the NCNZ Code of Conduct and explain how they guide a nurse's use of social media.",model:"Principle 1 (respect dignity and individuality) means never posting content online that identifies, demeans, or disrespects a health consumer. Principle 5 (respect privacy and confidentiality) means never sharing patient information, images, or identifying details online — even vague references can breach confidentiality because patients don't have to be named to be identifiable. Principle 7 (act with integrity) requires nurses to ensure their online behaviour is honest, professional, and consistent with their professional role. Principle 8 (maintain public trust) means remembering that even 'private' posts reflect on the profession, and unprofessional behaviour online can damage public confidence in all nurses. The NCNZ and NZNO guidelines emphasise that nurses are always seen as nurses, on and off duty, and once information is online it is almost impossible to completely remove."},
+  {id:10,lo:"LO4",q:"What should a nurse do if asked to perform a task they do not feel competent to do?",model:"The nurse should first speak up early and clearly state that they do not feel competent or confident to perform the task — this prevents unsafe practice and demonstrates accountability. They should explain professionally that they have not been trained, assessed, or supervised in the skill, which aligns with the Code of Conduct value of integrity. They should then seek guidance by asking for supervision while performing the task, additional teaching, or the opportunity to observe first — this shows commitment to learning while keeping patients safe. If they cannot perform the task safely, they must ensure a competent nurse or clinician takes over, which protects the patient and meets legal and ethical obligations. Afterward, the nurse should reflect on the experience and arrange training or practice to develop the skill, supporting ongoing professional development. This approach upholds Principle 4 (providing safe and competent care) and the value of integrity."},
+];
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// SRS ENGINE
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const SRS_MS = {again:0,hard:60000,good:180000,easy:420000};
+function rateSRS(card,rating){
+  const now=Date.now();
+  return{...card,lastReview:now,nextReview:now+SRS_MS[rating],
+    difficulty:rating==='again'?Math.min((card.difficulty||0)+1,5):Math.max((card.difficulty||0)-1,0),
+    timesReviewed:(card.timesReviewed||0)+1,lastRating:rating};
+}
+function isDue(c){return !c.nextReview||c.nextReview<=Date.now()}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// APP STATE & RENDER
+// ═══════════════════════════════════════════════════════════════════════════════
+
+let state = {
+  view:'home',
+  cards: FLASHCARDS.map(c=>({...c,nextReview:null,lastReview:null,timesReviewed:0,lastRating:null})),
+  filter:'all',
+  fcIdx:0,
+  flipped:false,
+  openSection:null,
+  quizAnswers:{},
+  quizRevealed:{},
+};
+
+// Try loading SRS state from localStorage
+try {
+  const saved = localStorage.getItem('bn1_srs');
+  if(saved){
+    const parsed = JSON.parse(saved);
+    state.cards = state.cards.map(c => {
+      const s = parsed.find(p => p.id === c.id);
+      return s ? {...c,...s} : c;
+    });
+  }
+} catch(e){}
+
+function saveSRS(){
+  try{localStorage.setItem('bn1_srs',JSON.stringify(state.cards.map(c=>({id:c.id,nextReview:c.nextReview,lastReview:c.lastReview,timesReviewed:c.timesReviewed,lastRating:c.lastRating,difficulty:c.difficulty}))));}catch(e){}
+}
+
+function setView(v){state.view=v;state.fcIdx=0;state.flipped=false;render();window.scrollTo(0,0);}
+function setFilter(f){state.filter=f;state.fcIdx=0;state.flipped=false;render();}
+
+function getDue(){return state.cards.filter(c=>isDue(c)&&(state.filter==='all'||c.lo===state.filter));}
+
+function render(){
+  const app=document.getElementById('app');
+  const due=getDue();
+  const mastered=state.cards.filter(c=>c.lastRating==='easy'||c.lastRating==='good').length;
+  const pct=Math.round((mastered/state.cards.length)*100);
+
+  if(state.view==='home'){
+    app.innerHTML=`
+      <div class="hero">
+        <div class="hero-label">BN1 Nursing</div>
+        <h1>Study <em>Hub</em></h1>
+        <p>LO2 & LO4 — Professional Relationships, Cultural Safety, Legislation & Codes of Conduct</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card"><div class="stat-val" style="color:var(--accent2)">${state.cards.length}</div><div class="stat-label">Cards</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:${getDue().length>0?'var(--accent3)':'var(--accent)'}">${getDue().length}</div><div class="stat-label">Due Now</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:var(--accent)">${pct}%</div><div class="stat-label">Mastery</div></div>
+        <div class="stat-card"><div class="stat-val" style="color:var(--accent4)">${state.cards.filter(c=>c.timesReviewed>0).length}</div><div class="stat-label">Reviewed</div></div>
+      </div>
+      <div class="home-cards">
+        <button class="home-card" onclick="setView('flashcards')"><span class="icon">🃏</span><div><div class="title" style="color:var(--accent)">SRS Flashcards</div><div class="desc">${getDue().length} cards due for review — spaced repetition</div></div></button>
+        <button class="home-card" onclick="setView('study')"><span class="icon">📖</span><div><div class="title" style="color:var(--accent2)">Study Guide</div><div class="desc">All topics with full detail — read and revise</div></div></button>
+        <button class="home-card" onclick="setView('quiz')"><span class="icon">✍️</span><div><div class="title" style="color:var(--accent3)">Practice Questions</div><div class="desc">10 short-answer questions with model answers</div></div></button>
+      </div>
+    `;
+    return;
+  }
+
+  // ── TOP BAR ──
+  let topBar=`<div class="top-bar">
+    <div class="brand" onclick="setView('home')">Study <em>Hub</em></div>
+    <div class="nav-pills">
+      <button class="nav-pill ${state.view==='flashcards'?'active':''}" onclick="setView('flashcards')">Cards</button>
+      <button class="nav-pill ${state.view==='study'?'active':''}" onclick="setView('study')">Study</button>
+      <button class="nav-pill ${state.view==='quiz'?'active':''}" onclick="setView('quiz')">Quiz</button>
+    </div>
+  </div>`;
+
+  let filterBar=`<div class="filter-bar">
+    ${['all','LO2','LO4'].map(f=>`<button class="filter-btn ${state.filter===f?'active':''}" onclick="setFilter('${f}')">${f==='all'?'All Topics':f}</button>`).join('')}
+  </div>`;
+
+  // ── FLASHCARDS VIEW ──
+  if(state.view==='flashcards'){
+    if(due.length===0){
+      app.innerHTML=topBar+filterBar+`<div class="fc-header"><h2 style="color:var(--accent)">Flashcards</h2></div>
+        <div class="done-box"><div class="done-emoji">🎉</div><div class="done-title">All caught up!</div><div class="done-desc">No cards due for review. Come back later or switch your filter.<br><br>Cards will become due again as time passes based on your confidence ratings.</div></div>`;
+      return;
+    }
+    const c=due[Math.min(state.fcIdx,due.length-1)];
+    const tagClass=c.lo==='LO2'?'tag-lo2':'tag-lo4';
+    app.innerHTML=topBar+filterBar+`
+      <div class="fc-header"><h2 style="color:var(--accent)">Flashcards</h2><span class="fc-counter">${state.fcIdx+1} / ${due.length}</span></div>
+      <div class="fc-progress-bar"><div class="fc-progress-fill" style="width:${((state.fcIdx+1)/due.length)*100}%;background:var(--accent)"></div></div>
+      <div class="card-wrap" onclick="state.flipped=!state.flipped;render()">
+        <div class="card">
+          <div class="card-tags"><span class="tag ${tagClass}">${c.lo}</span><span class="tag tag-topic">${c.topic}</span></div>
+          <div class="card-side-label">${state.flipped?'Answer':'Question'}</div>
+          ${state.flipped
+            ?`<div class="card-back">${escHtml(c.back)}</div>`
+            :`<div class="card-front">${escHtml(c.front)}</div><div class="card-hint">Tap to reveal answer</div>`}
+        </div>
+      </div>
+      ${state.flipped?`<div class="rate-grid">
+        <button class="rate-btn" style="border:1px solid var(--danger)33" onclick="rateCard('again')" onmouseenter="this.style.background='var(--danger)18'" onmouseleave="this.style.background='var(--surface)'"><div class="rate-label" style="color:var(--danger)">Again</div><div class="rate-sub">now</div></button>
+        <button class="rate-btn" style="border:1px solid var(--accent3)33" onclick="rateCard('hard')" onmouseenter="this.style.background='var(--accent3)18'" onmouseleave="this.style.background='var(--surface)'"><div class="rate-label" style="color:var(--accent3)">Hard</div><div class="rate-sub">1 min</div></button>
+        <button class="rate-btn" style="border:1px solid var(--accent2)33" onclick="rateCard('good')" onmouseenter="this.style.background='var(--accent2)18'" onmouseleave="this.style.background='var(--surface)'"><div class="rate-label" style="color:var(--accent2)">Good</div><div class="rate-sub">3 min</div></button>
+        <button class="rate-btn" style="border:1px solid var(--accent)33" onclick="rateCard('easy')" onmouseenter="this.style.background='var(--accent)18'" onmouseleave="this.style.background='var(--surface)'"><div class="rate-label" style="color:var(--accent)">Easy</div><div class="rate-sub">7 min</div></button>
+      </div>`:''}
+    `;
+    return;
+  }
+
+  // ── STUDY VIEW ──
+  if(state.view==='study'){
+    const filtered=STUDY_SECTIONS.filter(s=>state.filter==='all'||s.lo===state.filter);
+    app.innerHTML=topBar+`
+      <div class="study-header"><h2 style="color:var(--accent2)">Study Guide</h2></div>`+filterBar+`
+      <div class="accordion">
+        ${filtered.map(s=>{
+          const isOpen=state.openSection===s.id;
+          const tagC=s.lo==='LO2'?'tag-lo2':'tag-lo4';
+          return `<div>
+            <button class="acc-trigger ${isOpen?'open':''}" onclick="state.openSection=state.openSection==='${s.id}'?null:'${s.id}';render()">
+              <div style="display:flex;align-items:center"><span class="acc-lo tag ${tagC}">${s.lo}</span><span class="acc-title">${s.title}</span></div>
+              <span class="acc-arrow ${isOpen?'open':''}">▾</span>
+            </button>
+            ${isOpen?`<div class="acc-body">${s.html}</div>`:''}
+          </div>`;
+        }).join('')}
+      </div>`;
+    return;
+  }
+
+  // ── QUIZ VIEW ──
+  if(state.view==='quiz'){
+    app.innerHTML=topBar+`
+      <div class="quiz-header"><h2 style="color:var(--accent3)">Practice Questions</h2></div>
+      <p class="quiz-intro">Write your answer in the text box, then reveal the model answer to compare. Aim for 4–6 sentences with specific references to the Code of Conduct, legislation, or competencies. Your answers are saved as you type.</p>
+      ${QUIZ.map(q=>{
+        const tagC=q.lo==='LO2'?'tag-lo2':'tag-lo4';
+        const revealed=state.quizRevealed[q.id];
+        return `<div class="q-card">
+          <div class="q-tags"><span class="tag ${tagC}">${q.lo}</span><span class="tag" style="background:rgba(240,192,64,.1);color:var(--accent3)">Q${q.id}</span></div>
+          <div class="q-text">${q.q}</div>
+          <textarea class="q-textarea" placeholder="Write your answer here..." oninput="state.quizAnswers[${q.id}]=this.value">${state.quizAnswers[q.id]||''}</textarea>
+          <button class="reveal-btn ${revealed?'open':'closed'}" onclick="state.quizRevealed[${q.id}]=!state.quizRevealed[${q.id}];render()">${revealed?'Hide':'Reveal'} Model Answer</button>
+          ${revealed?`<div class="model-box"><div class="model-label">Model Answer</div>${escHtml(q.model)}</div>`:''}
+        </div>`;
+      }).join('')}
+    `;
+    return;
+  }
+}
+
+function rateCard(rating){
+  const due=getDue();
+  const c=due[Math.min(state.fcIdx,due.length-1)];
+  const updated=rateSRS(c,rating);
+  state.cards=state.cards.map(x=>x.id===c.id?updated:x);
+  state.flipped=false;
+  saveSRS();
+  const newDue=getDue();
+  if(state.fcIdx>=newDue.length) state.fcIdx=Math.max(0,newDue.length-1);
+  render();
+}
+
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');}
+
+// Boot
+render();
+</script>
+</body>
+</html>
