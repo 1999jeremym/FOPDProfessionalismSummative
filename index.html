@@ -675,6 +675,7 @@ let state = {
   cards: FLASHCARDS.map(c=>({...c,nextReview:null,lastReview:null,timesReviewed:0,lastRating:null})),
   filter:'all',
   fcIdx:0,
+  currentCardId:null,
   flipped:false,
   openSection:null,
   quizAnswers:{},
@@ -714,8 +715,8 @@ function saveFopdAnswers(){
   try{localStorage.setItem('fopd_fopd_answers',JSON.stringify(state.fopdAnswers));}catch(e){}
 }
 
-function setView(v){state.view=v;state.fcIdx=0;state.flipped=false;render();window.scrollTo(0,0);}
-function setFilter(f){state.filter=f;state.fcIdx=0;state.flipped=false;render();}
+function setView(v){state.view=v;state.fcIdx=0;state.currentCardId=null;state.flipped=false;render();window.scrollTo(0,0);}
+function setFilter(f){state.filter=f;state.fcIdx=0;state.currentCardId=null;state.flipped=false;render();}
 function getDue(){return state.cards.filter(c=>isDue(c)&&(state.filter==='all'||c.lo===state.filter));}
 
 function getThemeIcon(){
@@ -805,7 +806,11 @@ function render(){
         <div class="done-box"><div class="done-emoji">🎉</div><div class="done-title">All caught up!</div><div class="done-desc">No cards due for review. Come back later or switch your filter.<br><br>Cards will become due again as time passes based on your confidence ratings.</div></div>`;
       return;
     }
-    const c=due[Math.min(state.fcIdx,due.length-1)];
+    // Resolve current card by ID for stability; fall back to fcIdx
+    let c = state.currentCardId ? due.find(x=>x.id===state.currentCardId) : null;
+    if(!c){ c = due[Math.min(state.fcIdx,due.length-1)]; state.currentCardId=c.id; }
+    const cardPos = due.findIndex(x=>x.id===c.id);
+    if(cardPos>=0) state.fcIdx=cardPos;
     const tagClass=c.lo==='LO2'?'tag-lo2':c.lo==='LO4'?'tag-lo4':'tag-fopd';
     app.innerHTML=topBar+filterBar+`
       <div class="fc-header"><h2 style="color:var(--accent)">Flashcards</h2><span class="fc-counter">${state.fcIdx+1} / ${due.length}</span></div>
@@ -873,13 +878,26 @@ function render(){
 
 function rateCard(rating){
   const due=getDue();
-  const c=due[Math.min(state.fcIdx,due.length-1)];
+  // Always use currentCardId to identify which card is being rated
+  const c=state.currentCardId ? due.find(x=>x.id===state.currentCardId) : due[Math.min(state.fcIdx,due.length-1)];
+  if(!c) return;
+  const currentIdx=due.findIndex(x=>x.id===c.id);
   const updated=rateSRS(c,rating);
   state.cards=state.cards.map(x=>x.id===c.id?updated:x);
   state.flipped=false;
   saveSRS();
+  // After rating, pick the next card in the pre-rating due list (skip the one just rated)
   const newDue=getDue();
-  if(state.fcIdx>=newDue.length) state.fcIdx=Math.max(0,newDue.length-1);
+  // Try to advance to what was next before rating
+  const nextIdx=currentIdx; // same index now points to what was next card
+  if(newDue.length===0){
+    state.currentCardId=null;
+    state.fcIdx=0;
+  } else {
+    const nextCard=newDue[Math.min(nextIdx,newDue.length-1)];
+    state.currentCardId=nextCard.id;
+    state.fcIdx=Math.min(nextIdx,newDue.length-1);
+  }
   render();
 }
 
