@@ -214,41 +214,44 @@ function toggleTheme(){
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const FLASHCARDS = [
-  // ── LO2: Therapeutic Relationships ──
-  {id:1,lo:"LO2",topic:"Therapeutic Relationship",front:"What are the 4 components of the nurse-client relationship?",back:"Power — the nurse holds knowledge and authority the client does not.\n\nTrust — the client must feel safe in the nurse's care.\n\nRespect — valuing the client's dignity and individuality.\n\nProfessional Intimacy — access to personal and physical information about the client.\n\nThese four components are ALWAYS present, regardless of the length of the interaction."},
-  {id:2,lo:"LO2",topic:"Therapeutic Relationship",front:"How does a therapeutic relationship differ from a social relationship? Name at least 5 differences.",back:"1. PURPOSE: Therapeutic = improve client's health outcomes. Social = mutual enjoyment.\n\n2. TIMEFRAME: Therapeutic = defined start and end (begins with care, ends at discharge). Social = ongoing, open-ended.\n\n3. FOCUS: Therapeutic = client's needs ONLY. Social = both parties' needs.\n\n4. BOUNDARIES: Therapeutic = strict professional boundaries. Social = informal.\n\n5. CONFIDENTIALITY: Therapeutic = legally and ethically required. Social = varied.\n\n6. POWER: Therapeutic = nurse holds more power. Social = relatively equal."},
-  {id:3,lo:"LO2",topic:"Therapeutic Relationship",front:"When does the therapeutic relationship end?",back:"The therapeutic relationship ends when:\n• The nursing care plan goals have been met, OR\n• The patient is discharged.\n\nEven when a nurse provides care to the same patient over months or years (e.g. home care or long-term care), the relationship remains PROFESSIONALLY STRUCTURED.\n\nThe relationship ends when the therapeutic relationship ends — not when the nurse's feelings change."},
-  {id:4,lo:"LO2",topic:"Professional Boundaries",front:"Define professional boundaries. Who is responsible for maintaining them?",back:"Professional boundaries are the SPACES BETWEEN THE NURSE'S POWER AND THE CLIENT'S VULNERABILITY.\n\nThe NURSE is ALWAYS responsible for establishing and maintaining appropriate boundaries, REGARDLESS of how a client behaves.\n\nSome boundaries are clear-cut. Others are less clear and require professional judgement. The nurse must recognise when a relationship is slipping into the non-professional realm and take IMMEDIATE action."},
-  {id:5,lo:"LO2",topic:"Professional Boundaries",front:"What are the 3 zones of involvement? Describe each.",back:"1. UNDER-INVOLVEMENT: Task-focused only, emotionally absent. The nurse just 'does the job' without therapeutic engagement. Neglects holistic care and dehumanises the client.\n\n2. THERAPEUTIC ZONE (ideal): Emotionally present but objective. Active listening for cues. Client-centred, goal-directed care. This is where safe, effective nursing happens.\n\n3. OVER-INVOLVEMENT: Loss of objectivity and emotional entanglement. The nurse's personal feelings interfere with professional judgement. Compromises safe care."},
-  {id:6,lo:"LO2",topic:"Professional Boundaries",front:"Give 4 examples of UNDER-involvement in nursing.",back:"1. Delaying care or treatment (e.g. waiting to answer a call bell, delaying PRN medication unnecessarily)\n\n2. Taking shortcuts in care (e.g. neglecting hand-washing, skipping a dressing change)\n\n3. Blaming the client for lack of progress\n\n4. Using disrespectful, demeaning, insulting, or humiliating language or tone\n\nOther examples: being unnecessarily rough, inadequately draping during procedures, avoiding the client, withholding information needed for informed decisions."},
-  {id:7,lo:"LO2",topic:"Professional Boundaries",front:"Give 4 examples of OVER-involvement in nursing.",back:"1. Participating in personal conversations, flirtation, off-colour jokes, or sexual innuendo\n\n2. Feeling a sense of excitement, longing, romantic or sexual thoughts related to the client\n\n3. Hiding your relationship with the client from others\n\n4. Refusing to transfer care to another provider when therapeutically indicated\n\nOther examples: receiving feedback that behaviour is overly familiar or intrusive, sharing excessive personal information with the client."},
-  {id:8,lo:"LO2",topic:"Communication",front:"Name the 7 bridges to a therapeutic relationship.",back:"1. RESPECT — being genuinely respectful\n2. CARING — use of knowledge and skill therapeutically\n3. EMPOWERMENT — helping a person take charge of their life\n4. TRUST — feeling safe in the nurse's care\n5. EMPATHY — understanding of the patient's feelings (not just sympathy)\n6. MUTUALITY — sharing in resolving the patient's health problem\n7. ETHICAL VALUES — veracity (truthfulness), confidentiality, justice, beneficence (doing good)"},
-  {id:9,lo:"LO2",topic:"Communication",front:"What is culturally unsafe communication?",back:"Culturally unsafe communication is any action that DIMINISHES, DEMEANS, OR DISEMPOWERS the cultural identity and well-being of an individual (NCNZ, 1992).\n\nThis includes both verbal and non-verbal communication. It can include:\n• Dismissing cultural practices\n• Making assumptions based on stereotypes\n• Failing to use interpreters when needed\n• Ignoring spiritual or cultural needs\n• Using jargon without explanation\n\nThis definition applies to ALL communication, not just face-to-face — including online and written communication."},
-  {id:10,lo:"LO2",topic:"Communication",front:"What does the Duty of Confidentiality mean in professional communication?",back:"A nurse must PROTECT ALL PRIVATE INFORMATION about a health consumer and only share it when:\n\n1. NECESSARY FOR CARE — only on a 'need-to-know' basis with other health professionals involved in the person's care\n\n2. REQUIRED BY LAW\n\nIn practice this means:\n• Keep ALL patient information private\n• Be careful about WHERE you discuss patients — NOT in hallways, lifts, cafeterias, or online\n• Communicate respectfully and securely\n• Follow the Code of Conduct, Privacy Act, and Health Information Privacy Code"},
-  {id:11,lo:"LO2",topic:"Cultural Safety",front:"Define cultural safety. Who determines whether care is culturally safe?",back:"Cultural safety is the EFFECTIVE NURSING PRACTICE of a person or family from another culture, that is DETERMINED BY THAT PERSON OR FAMILY (Ramsden, 2002).\n\nAn unsafe cultural practice is any action that DEMEANS the cultural identity of a particular person or family.\n\nKey point: Cultural safety is an OUTCOME — it is defined by the RECIPIENT of care, NOT by the nurse.\n\nIt requires working from the cultural perspective of the OTHER person, not from your own perspective."},
-  {id:12,lo:"LO2",topic:"Cultural Safety",front:"What does cultural safety require of a nurse? List 5 things.",back:"1. Work from the CULTURAL PERSPECTIVE OF THE OTHER PERSON, not your own\n\n2. REFLECT on your own biases, assumptions, and cultural lens\n\n3. ASK the person (or their whānau/representatives) what they prefer, then meet those preferences wherever possible\n\n4. Try to UNDERSTAND the person's history by talking to them and their family\n\n5. ASK QUESTIONS if you are unsure — this is respectful, not intrusive\n\nAlso: Challenge racism and discrimination in the delivery of healthcare."},
-  {id:13,lo:"LO2",topic:"Cultural Safety",front:"What is kawa whakaruruhau and how does it differ from whakapapa-centred care?",back:"KAWA WHAKARURUHAU = cultural safety in the Māori context. It ensures care is respectful and responsive to the cultural needs and identities of Māori. It means providing an environment where Māori feel safe, respected, and understood, without fear of discrimination. Requires nurses to reflect on their OWN discrimination and bias.\n\nWHAKAPAPA-CENTRED CARE = care that acknowledges a person's heritage, family connections, and identity. It goes BEYOND treating physical symptoms to incorporate a deeper understanding of the individual's background, values, and relationships, particularly for Māori. Emphasises connections to family and ancestors as central to well-being."},
-  {id:14,lo:"LO2",topic:"Cultural Safety",front:"How does Te Tiriti o Waitangi relate to nursing practice? What must nurses do?",back:"Te Tiriti o Waitangi provides the FOUNDATION for working in partnership with Māori to address health inequities and support safe, effective care.\n\nThe NCNZ standards of competence integrate Te Tiriti's articles and principles.\n\nUnder POU ONE (Māori Health), nurses must:\n1. Engage in ongoing professional development related to Māori health and Te Tiriti\n2. Advocate for health equity for Māori in ALL situations\n3. Understand the impact of social determinants (including colonisation) on health\n4. Use te reo and incorporate tikanga Māori into practice where appropriate"},
-  {id:15,lo:"LO2",topic:"Self-Reflection",front:"Why is self-reflection important in NZ nursing? Give 5 reasons.",back:"1. SUPPORTS SAFE, ACCOUNTABLE PRACTICE — helps recognise strengths and limitations, ensuring practice within competence\n\n2. IMPROVES QUALITY OF CARE — refines clinical skills, communication, and decision-making\n\n3. ENHANCES CULTURAL SAFETY — helps examine own biases, assumptions, and cultural lens (essential for upholding mana and respecting diversity)\n\n4. STRENGTHENS PROFESSIONAL IDENTITY — part of ongoing professional development; helps understand how values and experiences shape practice\n\n5. SUPPORTS ETHICAL, COMPASSIONATE CARE — encourages empathy, emotional awareness, and integrity (key Code of Conduct values)\n\nSelf-reflection is a CORE professional requirement in Aotearoa."},
-  {id:16,lo:"LO2",topic:"Competencies",front:"What are the first two pou of the NCNZ RN competencies? List their descriptors.",back:"POU ONE — MĀORI HEALTH:\n1.1 Engages in ongoing PD related to Māori health and Te Tiriti\n1.2 Advocates for health equity for Māori in all situations\n1.3 Understands the impact of social determinants (e.g. colonisation) on health\n1.4 Uses te reo and incorporates tikanga Māori where appropriate\n\nPOU TWO — CULTURAL SAFETY:\n2.1 Practises culturally safe care determined by the recipient\n2.2 Challenges racism and discrimination in healthcare delivery\n2.3 Engages in partnership with individuals, whānau, and communities\n2.4 Advocates by including cultural, spiritual, physical, and mental health\n2.5 Contributes to collaborative team culture respecting diversity"},
-  {id:17,lo:"LO4",topic:"Legislation",front:"What is the HPCAA 2003 and what does it require?",back:"HEALTH PRACTITIONERS COMPETENCE ASSURANCE ACT 2003\n\n• The OVERARCHING LAW governing ALL health professions in NZ\n• Requires the Nursing Council to set standards of competence and codes of conduct (under section 118(i))\n• Purpose: to PROTECT THE HEALTH AND SAFETY OF THE PUBLIC\n\nThe NCNZ Code of Conduct outlines the standards of ethical conduct set by the Nursing Council under this Act."},
-  {id:18,lo:"LO4",topic:"Legislation",front:"Name 6 key pieces of legislation relevant to NZ nursing.",back:"1. HPCAA 2003 — governs all health professions, establishes NCNZ authority\n\n2. PRIVACY ACT — protects personal information\n\n3. HEALTH INFORMATION PRIVACY CODE — specific rules for health information\n\n4. CODE OF HEALTH & DISABILITY SERVICES CONSUMERS' RIGHTS (HDC Code) — 10 rights of health consumers\n\n5. HARMFUL DIGITAL COMMUNICATIONS ACT 2015 — relevant to social media conduct\n\n6. EMPLOYMENT RELATIONS ACT 2000 — relevant to nurses' rights and obligations (including online expression)"},
-  {id:19,lo:"LO4",topic:"HDC Code",front:"List ALL 10 rights of health consumers under the HDC Code.",back:"1. Right to be treated with RESPECT\n2. Right to freedom from DISCRIMINATION, coercion, harassment, and exploitation\n3. Right to DIGNITY and independence\n4. Right to services of an APPROPRIATE STANDARD\n5. Right to EFFECTIVE COMMUNICATION\n6. Right to be FULLY INFORMED\n7. Right to make an INFORMED CHOICE and give informed consent\n8. Right to SUPPORT\n9. Rights in respect of TEACHING or RESEARCH\n10. Right to COMPLAIN\n\nShort-answer tip: Link these to scenarios. E.g. Right 5 connects to cultural safety and interpreters."},
-  {id:20,lo:"LO4",topic:"NCNZ vs NZNO",front:"What is the difference between NCNZ and NZNO?",back:"NCNZ (NURSING COUNCIL OF NEW ZEALAND):\n• Regulatory body (statutory authority under HPCAA 2003)\n• Purpose: PROTECT THE PUBLIC\n• Sets: Code of Conduct, competencies, scopes of practice\n• Power: can register, discipline, and deregister nurses\n\nNZNO (NZ NURSES ORGANISATION):\n• Professional body AND union\n• Purpose: ADVOCATE FOR NURSES\n• Publishes: Code of Ethics, standards of practice\n• Membership is VOLUNTARY\n\nMemory aid: NCNZ = protects PUBLIC. NZNO = supports NURSES."},
-  {id:21,lo:"LO4",topic:"Code of Conduct",front:"What are the 4 core VALUES of the NCNZ Code of Conduct? Explain each.",back:"1. RESPECT — valuing the dignity, privacy, and individuality of every health consumer\n\n2. TRUST — acting in ways that maintain the public's confidence in nurses and the profession\n\n3. PARTNERSHIP — working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care\n\n4. INTEGRITY — being honest, accountable, and acting ethically in all professional interactions\n\nThese four values underpin the eight principles of the Code."},
-  {id:22,lo:"LO4",topic:"Code of Conduct",front:"List ALL 8 principles of the NCNZ Code of Conduct.",back:"1. Respect the DIGNITY and INDIVIDUALITY of health consumers\n2. Respect the CULTURAL NEEDS and VALUES of health consumers\n3. Work in PARTNERSHIP with health consumers to promote and protect their WELL-BEING\n4. Maintain health consumer trust by providing SAFE and COMPETENT care\n5. Respect health consumers' PRIVACY and CONFIDENTIALITY\n6. Work RESPECTFULLY WITH COLLEAGUES to best meet health consumers' needs\n7. Act with INTEGRITY to justify health consumers' trust\n8. Maintain PUBLIC TRUST and confidence in the nursing profession\n\nMemory: 1-3 = Respect & Partnership | 4 = Safe care | 5 = Privacy | 6 = Colleagues | 7-8 = Integrity & Trust"},
-  {id:23,lo:"LO4",topic:"Code of Conduct",front:"What are the 3 supporting guidelines published by NCNZ alongside the Code?",back:"1. CODE OF CONDUCT (2012) — core standards of ethical conduct\n\n2. GUIDELINES: PROFESSIONAL BOUNDARIES (2012) — detailed guidance on maintaining appropriate nurse-client boundaries\n\n3. GUIDELINES: SOCIAL MEDIA & ELECTRONIC COMMUNICATION (2012) — guidance on online conduct\n\nAll three are established under section 118(i) of the HPCAA 2003.\n\nOf the 8 Code principles, FOUR directly intersect with social media and electronic communication."},
-  {id:24,lo:"LO4",topic:"Social Media",front:"Why must nurses maintain professional boundaries on social media? Give 4 reasons.",back:"1. PROTECT PATIENT PRIVACY & CONFIDENTIALITY — anything posted can spread quickly and permanently. Even vague comments can unintentionally identify a patient or breach the Privacy Act.\n\n2. UPHOLD PUBLIC TRUST — unprofessional posts (even on 'private' accounts) damage confidence in the profession. Nurses are ALWAYS seen as nurses, on and off duty.\n\n3. AVOID BLURRING ROLES — connecting with patients online (e.g. 'friending' them) creates dual relationships, risking over-involvement, favouritism, or inappropriate familiarity.\n\n4. MAINTAIN SAFE, ETHICAL, CULTURALLY RESPECTFUL PRACTICE — posts can be misinterpreted or cause harm."},
-  {id:25,lo:"LO4",topic:"Social Media",front:"Name 6 key rules from the NZNO 2019 social media guidelines.",back:"1. You have an ethical and LEGAL responsibility to maintain patient privacy and confidentiality at ALL times\n\n2. NEVER transmit information or images related to client care under any circumstances\n\n3. Passwords are NOT foolproof — 'private' does not mean secure\n\n4. Do NOT publish anything that could identify a patient (including rare diagnoses)\n\n5. Maintain CONFIDENTIALITY of the organisation where you work\n\n6. NEVER post photos without the express permission of the person/people in them\n\nAlso: Deleted content may remain accessible. Once online, information is almost impossible to completely remove."},
-  {id:26,lo:"LO4",topic:"Social Media",front:"Give an example of real-world consequences for social media misconduct in nursing.",back:"EXAMPLE 1: A nurse was struck off the register after a Facebook connection with a patient/client (Nursing Standard, 2010).\n\nEXAMPLE 2: Canadian nurse Carolyn Strom was disciplined and fined $26,000 by the Saskatchewan Registered Nurses Association after a 2015 Facebook post criticising the end-of-life care her grandfather received. She was on parental leave and posted on her personal page. Her appeal in 2018 was denied.\n\nKey lesson: Even well-intentioned posts about care can result in professional misconduct findings. The duty to maintain standards applies at ALL times."},
-  {id:27,lo:"LO4",topic:"Competence",front:"What should a nurse do if asked to perform a task beyond their competence? List 5 steps.",back:"1. SPEAK UP EARLY — clearly state you don't feel competent or confident (prevents unsafe practice, shows accountability)\n\n2. EXPLAIN PROFESSIONALLY — 'I haven't been trained, assessed, or supervised in this skill yet' (aligns with integrity)\n\n3. SEEK SUPPORT — ask for supervision while performing the task, additional teaching, or opportunity to observe first\n\n4. ENSURE SAFE CARE — if you can't perform safely, make sure a competent nurse or clinician takes over (protects the patient, meets legal/ethical obligations)\n\n5. REFLECT & PLAN — arrange training or practice afterward to develop the skill (supports ongoing professional development)\n\nLinks to PRINCIPLE 4 (safe, competent care) and the value of INTEGRITY."},
-  {id:28,lo:"LO4",topic:"Professionalism",front:"What is professionalism in nursing?",back:"Professionalism is demonstrating the PROFESSIONAL, LEGAL, AND ETHICAL STANDARDS required in practice.\n\nThis includes the knowledge, skills, values, and attributes expected of the nursing profession.\n\nKey characteristics:\n• Extended education and evidence-based knowledge\n• Professional practice governed by NCNZ\n• Autonomy in decision-making within scope of practice\n• Provides a specific and needed service to society\n• Governed by a Code of Ethics\n\nProfessionalism is maintained through ongoing competence, self-reflection, and adherence to the Code of Conduct."},
-  // ── FOPD New Cards ──
-  {id:29,lo:"FOPD",topic:"Code of Conduct",front:"What are the 4 core values of the NCNZ Code of Conduct?",back:"1. RESPECT — valuing the dignity, privacy, and individuality of every health consumer\n\n2. TRUST — acting in ways that maintain the public's confidence in nurses and the profession\n\n3. PARTNERSHIP — working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care\n\n4. INTEGRITY — being honest, accountable, and acting ethically in all professional interactions"},
-  {id:30,lo:"FOPD",topic:"Social Media",front:"Why must a nurse maintain professional boundaries on social media?",back:"1. PROTECT PATIENT PRIVACY & CONFIDENTIALITY — posts spread quickly and permanently; even vague comments can identify a patient and breach the Privacy Act and Code of Conduct\n\n2. UPHOLD PUBLIC TRUST IN THE PROFESSION — unprofessional posts (even 'private') damage confidence. Nurses are ALWAYS nurses, on and off duty\n\n3. AVOID BLURRING PERSONAL AND PROFESSIONAL ROLES — 'friending' patients creates dual relationships, risking over-involvement, favouritism, or inappropriate familiarity\n\n4. MAINTAIN SAFE, ETHICAL, CULTURALLY RESPECTFUL PRACTICE — posts can be misinterpreted or cause harm"},
-  {id:31,lo:"FOPD",topic:"Confidentiality",front:"What does the Duty of Confidentiality mean?",back:"A nurse must PROTECT ALL PRIVATE INFORMATION about a health consumer and only share it when:\n• NECESSARY FOR CARE (need-to-know basis), OR\n• REQUIRED BY LAW\n\nIn practice:\n1. Keep patient info private — don't share with people not involved in care\n2. Only share with health professionals on a need-to-know basis\n3. Communicate respectfully and securely — NOT in hallways, lifts, or online\n4. Follow the Code of Conduct, Privacy Act, and Health Information Privacy Code"},
-  {id:32,lo:"FOPD",topic:"Competence",front:"How should a nurse respond if asked to do something they don't feel competent to do?",back:"1. SPEAK UP EARLY — clearly state you don't feel competent. Prevents unsafe practice and shows accountability\n\n2. EXPLAIN PROFESSIONALLY — state you haven't been trained, assessed, or supervised in this skill (aligns with INTEGRITY)\n\n3. SEEK SUPERVISION OR SUPPORT — ask for supervision, additional teaching, or to observe first\n\n4. ENSURE THE TASK IS DONE SAFELY — if you can't perform safely, ensure a competent clinician takes over (legal and ethical obligation)\n\n5. REFLECT AND BUILD COMPETENCE — arrange training afterward (ongoing professional development)"},
-  {id:33,lo:"FOPD",topic:"Self-Reflection",front:"What is the role of self-reflection in NZ nursing professionalism?",back:"Self-reflection is a CORE professional requirement in Aotearoa. It helps nurses:\n\n1. SUPPORT SAFE, ACCOUNTABLE PRACTICE — recognise strengths/limitations; practise within competence\n\n2. IMPROVE QUALITY OF CARE — refine clinical skills, communication, and decision-making\n\n3. ENHANCE CULTURAL SAFETY — examine own biases, assumptions, and cultural lens; upholds mana and respects diversity; aligns with Te Tiriti o Waitangi\n\n4. STRENGTHEN PROFESSIONAL IDENTITY — understand how values and experiences shape practice\n\n5. SUPPORT ETHICAL, COMPASSIONATE CARE — encourage empathy, emotional awareness, and integrity"},
+  // ── Module 1 & 2: Professionalism & Competence ──
+  {id:1,lo:"LO2",topic:"Professionalism",front:"What is the NCNZ definition of competence? Break down its five components.",back:"Competence is the combination of SKILLS, KNOWLEDGE, ATTITUDES, VALUES and ABILITIES that underpin effective performance as a nurse (NCNZ, 2022).\n\nKNOWLEDGE — nursing knowledge, anatomy & physiology, social science, environmental science, behavioural science, pharmacology.\n\nSKILLS — communication is number one; also assessment skills and technological abilities.\n\nATTITUDES — caring and compassion is a highly valued attitude; caring is a mutually beneficial experience for both nurse and patient (Watson, 2008).\n\nVALUES — professional values: Respect, Trust, Partnership, Integrity (NCNZ).\n\nABILITIES — critical thinking, time management, leadership, willingness to learn."},
+  {id:2,lo:"LO2",topic:"Professionalism",front:"What are the 8 most important characteristics of a professional nurse? (Module 1)",back:"1. COMPETENCE\n2. KNOWLEDGE\n3. CONSCIENTIOUSNESS\n4. INTEGRITY\n5. RESPECT\n6. EMOTIONAL INTELLIGENCE\n7. APPROPRIATENESS\n8. CONFIDENCE\n\nThese characteristics require nurturing and strengthening throughout your career.\n\nAdditional characteristics include: Caring, Communication, Empathy, Attention to detail, Problem solving skills, Stamina, Sense of Humour, Patient Advocacy, Willingness to learn, Critical thinking, Time management, Leadership."},
+  {id:3,lo:"LO2",topic:"Professionalism",front:"What does professionalism mean in nursing? What does it imply about a person?",back:"Professionalism is demonstrating the PROFESSIONAL, LEGAL and ETHICAL STANDARDS required in practice.\n\nThis includes the knowledge, skills, values and attributes expected of the nursing profession.\n\nActing professionally implies the person is:\n• Conscientious in actions\n• Knowledgeable in the subject\n• Responsible to self and others\n• Integrates intellectual and professional standards into practice\n• Uses appropriate clinical judgement\n\nProfessional self-care is the awareness you have as a health professional to maintain professional boundaries and care for yourself effectively."},
+  {id:4,lo:"LO2",topic:"Professionalism",front:"What is Benner's Novice to Expert model? Name all 5 stages.",back:"1. NOVICE — Beginner; rule-based practice\n\n2. ADVANCED BEGINNER — Principles based upon experience begin to be formulated to guide actions\n\n3. COMPETENT — Plans own actions based on analytic thinking; efficient and organised\n\n4. PROFICIENT — Holistic decision making; can modify plans based on experience\n\n5. EXPERT — Intuitive knowing in clinical decision situations; flexible, highly proficient performance\n\nAll PDRP (Professional Development Recognition Programme) is modelled on Benner's novice to expert model."},
+  {id:5,lo:"LO2",topic:"Therapeutic Relationship",front:"What are the 4 components of the nurse-client relationship?",back:"POWER — the nurse holds knowledge and authority the client does not.\n\nTRUST — the client must feel safe in the nurse's care.\n\nRESPECT — valuing the client's dignity and individuality.\n\nPROFESSIONAL INTIMACY — access to personal and physical information about the client.\n\nThese four components are ALWAYS present, regardless of the context or length of the interaction (Module 2 / Module 5)."},
+  {id:6,lo:"LO2",topic:"Therapeutic Relationship",front:"How does a therapeutic relationship differ from a social relationship? Name 5 differences.",back:"1. PURPOSE — Therapeutic = improve client's health outcomes. Social = mutual enjoyment.\n\n2. TIMEFRAME — Therapeutic = defined start and end (begins with care, ends at discharge or goals met). Social = ongoing, open-ended.\n\n3. FOCUS — Therapeutic = client's needs ONLY. Social = both parties' needs.\n\n4. BOUNDARIES — Therapeutic = strict professional boundaries maintained by the nurse. Social = informal.\n\n5. CONFIDENTIALITY — Therapeutic = legally and ethically required. Social = varied.\n\nAdditionally: POWER IMBALANCE exists in therapeutic relationships; the nurse holds more power."},
+  {id:7,lo:"LO2",topic:"Therapeutic Relationship",front:"When does the therapeutic relationship end?",back:"The therapeutic relationship ends when:\n• The nursing care plan goals have been met, OR\n• The patient is discharged.\n\nEven when a nurse provides care to the same patient over several months or years (e.g. home care or long-term care), the nurse-patient relationship is STRUCTURED PROFESSIONALLY.\n\nThe relationship ends when the therapeutic relationship ends — not when the nurse's feelings change.\n\nThe nurse-patient relationship develops in the context of care provided and is goal-directed. (Module 2 / Module 5)"},
+  {id:8,lo:"LO2",topic:"Professional Boundaries",front:"Define professional boundaries. Who is responsible for maintaining them?",back:"Professional boundaries are the SPACES BETWEEN THE NURSE'S POWER AND THE CLIENT'S VULNERABILITY.\n\nThe NURSE is ALWAYS responsible for establishing and maintaining appropriate boundaries, REGARDLESS of how a client behaves.\n\nSome boundaries are clear-cut. Others are less clear and require professional judgement. The nurse must recognise when a relationship is slipping into the non-professional realm and take IMMEDIATE action.\n\nBoundaries are imposed by ETHICAL, LEGAL and PROFESSIONAL standards of nursing. They protect patients from exploitation and nurses from professional misconduct. (Module 2 / Module 5)"},
+  {id:9,lo:"LO2",topic:"Professional Boundaries",front:"What are the 3 zones of involvement? Describe each.",back:"1. UNDER-INVOLVEMENT — Disengaged, mechanically carrying out tasks, limiting health-related conversation, minimising a patient's suffering, being judgemental, avoiding the patient. Dehumanises the client and neglects holistic care.\n\n2. THERAPEUTIC ZONE (ideal) — Emotionally present but objective. Active listening for cues. Client-centred, goal-directed care. This is where safe, effective nursing happens.\n\n3. OVER-INVOLVEMENT — Loss of objectivity and emotional entanglement. The nurse's personal feelings interfere with professional judgement. Compromises safe care.\n\n(Module 2 / Module 5)"},
+  {id:10,lo:"LO2",topic:"Professional Boundaries",front:"Give 4 examples of UNDER-involvement in nursing.",back:"1. Delaying care or treatment (e.g. waiting to answer a call bell, delaying PRN medication unnecessarily)\n\n2. Taking shortcuts in care (e.g. neglecting hand-washing, skipping a dressing change)\n\n3. Blaming the client for lack of progress\n\n4. Using disrespectful, demeaning, insulting, or humiliating language or tone\n\nOther examples: being unnecessarily rough when providing care; inadequately draping a client during a procedure; withholding information the client needs to make an informed decision; avoiding the client to a degree that interferes with meeting care needs.\n\n(Module 2 / Module 5)"},
+  {id:11,lo:"LO2",topic:"Professional Boundaries",front:"Give 4 examples of OVER-involvement in nursing.",back:"1. Thinking about the client frequently when away from work\n\n2. Giving preferential care or time to the client, putting their needs above others\n\n3. Hiding your relationship with the client from others\n\n4. Spending breaks or time off with the client, seeking social contact, or providing personal information (e.g. email address or phone number)\n\nOther examples: feeling a sense of excitement, longing, romantic or sexual thoughts related to the client; refusing to transfer care to another provider when therapeutically indicated; participating in personal conversations, flirtation, or sexual innuendo.\n\n(Module 2 / Module 5)"},
+  {id:12,lo:"LO2",topic:"Professional Boundaries",front:"What is a 'boundary crossing'? Give 2 examples.",back:"A BOUNDARY CROSSING is a brief excursion across professional lines of behaviour that may be inadvertent, thoughtless or even purposeful, while attempting to meet a special therapeutic need of the client.\n\nSome individual behaviours may appear harmless but when put together, form a pattern indicating a boundary has been crossed.\n\nExamples:\n1. Calling a client's family to access client information when the client did not want them involved.\n\n2. Driving a client to do their banking because you were going that way.\n\n(Module 2 / Module 5)"},
+  {id:13,lo:"LO2",topic:"Professional Boundaries",front:"What is burnout in nursing? What causes it and what are its effects?",back:"BURNOUT occurs when a nurse is physically, emotionally and spiritually exhausted due to insufficient rest and self-care.\n\nSigns include: constant fatigue; feeling overworked or under-appreciated; lack of enthusiasm about work; compassion fatigue.\n\nEffects: impaired attention, memory, and decision making; decreased recall and attention to detail; poor patient care and compromised patient health outcomes.\n\nHow to prevent: mindfulness, supervision, exercise, diet, time management, maintaining family and friend networks, student groups.\n\n(Module 2 / Module 5)"},
+  {id:14,lo:"LO4",topic:"Legislation",front:"What is the HPCAA 2003 and what does it require of the Nursing Council?",back:"HEALTH PRACTITIONERS COMPETENCE ASSURANCE ACT 2003 (HPCAA)\n\n• The overarching law governing ALL health professions in New Zealand\n• Requires the Nursing Council to set standards of competence and codes of conduct under SECTION 118(i)\n• Purpose: to PROTECT THE HEALTH AND SAFETY OF THE PUBLIC\n\nThe Nursing Council outlines the standards of ETHICAL CONDUCT under this Act.\n\nNursing students must also meet the criteria for fitness to practise found in SECTION 16 of the HPCAA. All candidates for registration must disclose criminal convictions.\n\n(Module 1 / Module 5)"},
+  {id:15,lo:"LO4",topic:"Legislation",front:"Name 4 key pieces of legislation relevant to NZ nursing and social media conduct.",back:"1. HPCAA 2003 — governs all health professions; establishes NCNZ authority; sets standards of competence and ethical conduct\n\n2. PRIVACY ACT — protects personal information; ethical and legal obligation to maintain patient confidentiality\n\n3. HDC CODE OF HEALTH & DISABILITY SERVICES CONSUMERS' RIGHTS — 10 rights of health consumers\n\n4. HARMFUL DIGITAL COMMUNICATIONS ACT 2015 — sets 10 principles for digital communications; applies to texts, emails and online posts; provides processes if being harassed or bullied through social media\n\nAlso relevant: Employment Relations Act 2000 (clause 14 — freedom of expression; clause 17 — professional accountability)\n\n(Module 1 / Module 5)"},
+  {id:16,lo:"LO4",topic:"HDC Code",front:"List ALL 10 rights of health consumers under the HDC Code.",back:"1. Right to be treated with RESPECT\n2. Right to freedom from DISCRIMINATION, coercion, harassment, and exploitation\n3. Right to DIGNITY and independence\n4. Right to services of an APPROPRIATE STANDARD\n5. Right to EFFECTIVE COMMUNICATION\n6. Right to be FULLY INFORMED\n7. Right to make an INFORMED CHOICE and give informed consent\n8. Right to SUPPORT\n9. Rights in respect of TEACHING or RESEARCH\n10. Right to COMPLAIN\n\nConsumers have rights and professionals have obligations.\n\n(Module 2 / Module 5)"},
+  {id:17,lo:"LO4",topic:"NCNZ vs NZNO",front:"What is the difference between NCNZ and NZNO?",back:"NCNZ (NURSING COUNCIL OF NEW ZEALAND):\n• Regulatory body — statutory authority under HPCAA 2003\n• Purpose: PROTECT THE PUBLIC\n• Sets Code of Conduct, competencies, scopes of practice, guidelines on professional boundaries and social media\n• Power: can register, discipline, and deregister nurses\n\nNZNO (NZ NURSES ORGANISATION):\n• Professional body AND union\n• Purpose: ADVOCATE FOR NURSES\n• Publishes Code of Ethics and standards of practice (NZNO, 2012)\n• Membership is VOLUNTARY\n\nMemory aid: NCNZ = protects PUBLIC. NZNO = supports NURSES.\n\n(Module 1 / Module 5)"},
+  {id:18,lo:"LO4",topic:"Code of Conduct",front:"What are the 4 core VALUES of the NCNZ Code of Conduct? Explain each.",back:"1. RESPECT — valuing the dignity, privacy, and individuality of every health consumer\n\n2. TRUST — acting in ways that maintain the public's confidence in nurses and the profession\n\n3. PARTNERSHIP — working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care\n\n4. INTEGRITY — being honest, accountable, and acting ethically in all professional interactions\n\nThese four values underpin the eight principles of the Code. What is personal and what is professional will inevitably overlap.\n\n(NCNZ, 2012 — Module 2 / Module 5)"},
+  {id:19,lo:"LO4",topic:"Code of Conduct",front:"List ALL 8 principles of the NCNZ Code of Conduct.",back:"1. Respect the DIGNITY and INDIVIDUALITY of health consumers\n2. Respect the CULTURAL NEEDS and VALUES of health consumers\n3. Work in PARTNERSHIP with health consumers to promote and protect their WELL-BEING\n4. Maintain health consumer trust by providing SAFE and COMPETENT care\n5. Respect health consumers' PRIVACY and CONFIDENTIALITY\n6. Work RESPECTFULLY WITH COLLEAGUES to best meet health consumers' needs\n7. Act with INTEGRITY to justify health consumers' trust\n8. Maintain PUBLIC TRUST and confidence in the nursing profession\n\nEight principles with standards form the framework. These principles are based on the values underpinning professional conduct and are of EQUAL IMPORTANCE.\n\n(NCNZ, 2012 — Module 2 / Module 5)"},
+  {id:20,lo:"LO4",topic:"Code of Conduct",front:"What are the 3 supporting guidelines published by NCNZ alongside the Code of Conduct?",back:"1. CODE OF CONDUCT (2012) — core standards of ethical conduct set under section 118(i) of the HPCAA; outlines standards of behaviour nurses are expected to uphold\n\n2. GUIDELINES: PROFESSIONAL BOUNDARIES (2012) — provides more detailed guidance on maintaining appropriate nurse-client boundaries; designed to be read alongside the Code\n\n3. GUIDELINES: SOCIAL MEDIA & ELECTRONIC COMMUNICATION (2012) — helps nurses navigate online conduct in relation to professional standards\n\nOf the 8 Code principles, FOUR directly intersect with the use of social media and electronic communications.\n\n(Module 2 / Module 5)"},
+  {id:21,lo:"LO4",topic:"Social Media",front:"Name 6 key rules from the NZNO 2019 social media guidelines.",back:"1. You have an ethical and LEGAL obligation to maintain patient/client privacy and confidentiality at ALL times\n\n2. NEVER transmit by way of electronic media any patient-related image or information that may violate patient rights to confidentiality or privacy\n\n3. Do NOT identify patients by name or post information that may lead to identification — limiting access through privacy settings is NOT sufficient\n\n4. Maintain PROFESSIONAL BOUNDARIES in the use of electronic media — as with face-to-face relationships, the nurse has an obligation to establish, communicate and enforce professional boundaries online\n\n5. Promptly REPORT any breach of confidentiality or privacy\n\n6. Do NOT make disparaging comments about employers, co-workers, teachers or fellow students online\n\n(NZNO, 2019 — Module 1)"},
+  {id:22,lo:"LO4",topic:"Social Media",front:"What is defamation? What are the 3 elements that make a statement defamatory?",back:"Defamation cases may be brought in a court of law against a nurse and are CIVIL CLAIMS in which substantial monetary compensation can be awarded.\n\nA defamatory statement is one that:\n1. Is PUBLISHED to a third person or group of people\n2. IDENTIFIES (or is about) a patient/client/colleague/person (the 'subject')\n3. DAMAGES THE REPUTATION of the subject\n\nExample: A nursing student made a 'flippant' Facebook comment suggesting a lecturer had been drunk while marking. The lecturer and institution were clearly identifiable. This constituted defamation.\n\nThe NZNO Standards of Nursing Practice specify nurses are responsible for maintaining professional relationships with colleagues and employers.\n\n(Module 1)"},
+  {id:23,lo:"LO4",topic:"Social Media",front:"What are the 10 principles of the Harmful Digital Communications Act 2015?",back:"The Act sets out 10 principles for digital communications (texts, emails, online posts) — they should NOT:\n\n1. Give out sensitive personal information\n2. Be threatening, intimidating or menacing\n3. Be grossly offensive (judged by a reasonable person)\n4. Be indecent or obscene\n5. Be used to harass\n6. Make false claims\n7. Contain information given in confidence\n8. Encourage others to send harmful messages\n9. Encourage self-harm\n10. Put down (denigrate) someone based on colour, race, ethnicity, religion, gender, sexual orientation or disability\n\nNetSafe is the complaints agency under this Act.\n\n(Ministry of Justice, 2015 — Module 1)"},
+  {id:24,lo:"LO4",topic:"Social Media",front:"Give a real-world example of professional misconduct via social media in nursing.",back:"EXAMPLE (NZNO Guideline, Module 1):\nCanadian nurse Carolyn Strom was disciplined and fined by the Saskatchewan Registered Nurses Association (SRNA) after a 2015 Facebook post criticising the end-of-life care her grandfather received. She was on parental leave and the post was on her personal page. The SRNA found her guilty of professional misconduct and fined her $1,000 plus ordered her to pay $25,000 in hearing costs. Her appeal in 2018 was upheld by the provincial court.\n\nKEY LESSON: Traditional expectations of professional conduct still apply in non-traditional online contexts. Nursing students and nurses always have a duty to patients and the community to maintain professional standards, including when using social media."},
+  {id:25,lo:"LO4",topic:"Competence",front:"What should a nurse do if asked to perform a task beyond their competence? List 5 steps.",back:"1. SPEAK UP EARLY — clearly state you don't feel competent or confident; prevents unsafe practice and shows accountability\n\n2. EXPLAIN PROFESSIONALLY — 'I haven't been trained, assessed, or supervised in this skill yet' (aligns with integrity)\n\n3. SEEK SUPPORT — ask for supervision while performing the task, additional teaching, or opportunity to observe first\n\n4. ENSURE SAFE CARE — if you can't perform safely, make sure a competent nurse or clinician takes over (protects the patient; meets legal and ethical obligations)\n\n5. REFLECT & PLAN — arrange training or practice afterward to develop the skill (supports ongoing professional development)\n\nLinks to PRINCIPLE 4 (safe, competent care) and the value of INTEGRITY."},
+  // ── Module 6: Six Pou — RN Competencies ──
+  {id:26,lo:"LO2",topic:"Six Pou",front:"What are the six pou of the NCNZ RN Standards of Competence 2025?",back:"1. POU ONE — Māori Health\n2. POU TWO — Cultural Safety\n3. POU THREE — Whanaungatanga and Communication\n4. POU FOUR — Pūkengatanga and Evidence-Informed Nursing Practice\n5. POU FIVE — Manaakitanga and People-Centred Care\n6. POU SIX — Rangatiratanga and Leadership\n\nEach pou has a set of DESCRIPTORS which provides further depth and detail. Each pou is INTERRELATED and demonstrated in practice simultaneously.\n\nEvidence of safety to practise as a registered nurse is demonstrated when all six pou are met.\n\n(NCNZ Standards of Competence 2025 — Module 6)"},
+  {id:27,lo:"LO2",topic:"Six Pou",front:"What are the 4 descriptors of Pou One (Māori Health)?",back:"POU ONE — MĀORI HEALTH: Reflecting a commitment to Māori health, registered nurses support, respect and protect Māori rights while advocating for equitable and positive health outcomes. Nurses must also demonstrate kawa whakaruruhau by addressing power imbalances and working collaboratively with Māori.\n\n1.1 — Engages in ongoing professional development related to Māori health and the relevance of Te Tiriti o Waitangi articles and principles\n\n1.2 — Advocates for health equity for Māori in all situations and contexts\n\n1.3 — Understands the impact of social determinants, such as colonisation, on health and wellbeing\n\n1.4 — Uses te reo and incorporates tikanga Māori into practice where appropriate\n\n(Module 6)"},
+  {id:28,lo:"LO2",topic:"Six Pou",front:"What are the 5 descriptors of Pou Two (Cultural Safety)?",back:"POU TWO — CULTURAL SAFETY: Ensures registered nurses provide culturally safe care that is inclusive, responsive and equitable. Requires nurses to reflect on their practice, understand their cultural identity and the power imbalances between the nurse and the recipient of care.\n\n2.1 — Practises culturally safe care which is determined by the recipient\n2.2 — Challenges racism and discrimination in the delivery of nursing and health care\n2.3 — Engages in partnership with individuals, whānau and communities for the provision of health care\n2.4 — Advocates for individuals and whānau by including their cultural, spiritual, physical and mental health when providing care\n2.5 — Contributes to a collaborative team culture which respects diversity, including intersectional identities\n\n(Module 6)"},
+  {id:29,lo:"LO2",topic:"Six Pou",front:"What does Pou Four (Pūkengatanga) require of RNs? Name 4 key descriptors.",back:"POU FOUR — PŪKENGATANGA AND EVIDENCE-INFORMED NURSING PRACTICE: Requires RNs to use clinical skills, coupled with critical thinking and informed by high quality and current evidence, to provide quality, safe nursing care. Evidence-informed practice prepares the nurse to differentially diagnose, plan care, identify appropriate interventions, lead the implementation and evaluate care provision and outcomes.\n\n4.2 — Develops differential diagnoses based on comprehensive assessment, clinical expertise and current evidence\n4.5 — Safely manages medicines based on pharmacotherapeutic knowledge\n4.9 — Applies infection prevention and control principles\n4.11 — Understands and works within the limits of expertise and seeks guidance to ensure safe practice\n\n(Module 6)"},
+  {id:30,lo:"LO2",topic:"Six Pou",front:"What does Pou Six (Rangatiratanga and Leadership) require? List all 6 descriptors.",back:"POU SIX — RANGATIRATANGA AND LEADERSHIP: Demonstrated when nurses proactively provide solutions and lead innovation to improve the provision of care. Requires nurses to intervene, speak out, and advocate to escalate concerns on behalf of colleagues or recipients of care.\n\n6.1 — Actively contributes to a collaborative team culture of respect, support and trust\n6.2 — Demonstrates professional and ethical accountabilities and adheres to the NCNZ Code of Conduct, relevant legislation and organisational policies\n6.3 — Understands continuous learning and proactively seeks opportunities for professional development\n6.4 — Engages in quality improvement activities\n6.5 — Identifies and responds appropriately to risk impacting health, safety and wellbeing of self and others\n6.6 — Understands the impact of healthcare provision on global and local resources\n\n(Module 6)"},
+  {id:31,lo:"LO2",topic:"Six Pou",front:"What is kawa whakaruruhau and how does it differ from whakapapa-centred care?",back:"KAWA WHAKARURUHAU = cultural safety in the Māori context within nursing. It ensures care is respectful and responsive to the cultural needs and identities of Māori. It means providing an environment where Māori feel safe, respected and understood, without fear of discrimination. It requires nurses to reflect on their OWN discrimination and bias and the impact that this has on recipients of care.\n\nWHAKAPAPA-CENTRED CARE = care that acknowledges a person's heritage, family connections and identity. It goes beyond treating physical symptoms to incorporate a deeper understanding of the individual's background, values and relationships, particularly for Māori. Emphasises connections to family and ancestors as central to well-being.\n\n(Module 6 — NCNZ 2025)"},
+  {id:32,lo:"LO2",topic:"Self-Reflection",front:"What is professional self-care? Why is it important for nurses?",back:"Professional self-care is the AWARENESS you have as a health professional to maintain professional boundaries and care for yourself effectively.\n\nIt requires knowing yourself — your strengths and weaknesses — and being able to ask for help and support.\n\nBURNOUT is an occupational hazard for nurses.\n\nStrategies for professional self-care:\n• Mindfulness and supervision\n• Exercise, diet and time management\n• Maintaining family and friends; student groups/buddies\n• Debriefing with colleagues after highly emotional events\n• Seeking support when you feel uncomfortable about any aspect of the nurse-patient relationship\n\n(Module 1 — Introduction to Professionalism)"},
+  {id:33,lo:"FOPD",topic:"Code of Conduct",front:"What are the 4 core values of the NCNZ Code of Conduct?",back:"1. RESPECT — valuing the dignity, privacy, and individuality of every health consumer\n2. TRUST — acting in ways that maintain the public's confidence in nurses and the profession\n3. PARTNERSHIP — working alongside health consumers, whānau, and communities for shared decision-making and culturally safe care\n4. INTEGRITY — being honest, accountable, and acting ethically in all professional interactions\n\nThese four values underpin all eight principles of the Code. (NCNZ, 2012 — Module 2 / Module 5)"},
+  {id:34,lo:"FOPD",topic:"Social Media",front:"Why must a nurse maintain professional boundaries on social media? Give 4 reasons.",back:"1. PROTECT PATIENT PRIVACY & CONFIDENTIALITY — patients don't have to be named to be identifiable; even vague comments can breach the Privacy Act; deleted content may remain accessible\n\n2. UPHOLD PUBLIC TRUST IN THE PROFESSION — nurses are always seen as nurses, on and off duty; unprofessional posts damage confidence even from 'private' accounts\n\n3. AVOID BLURRING PERSONAL AND PROFESSIONAL ROLES — connecting with patients online creates dual relationships risking over-involvement or inappropriate familiarity; boundary violations can result in disciplinary action\n\n4. MAINTAIN SAFE, ETHICAL, CULTURALLY RESPECTFUL PRACTICE — posts can be misinterpreted; nurse has an obligation to establish and enforce professional boundaries in the online environment\n\n(NZNO, 2019 — Module 1)"},
+  {id:35,lo:"FOPD",topic:"Confidentiality",front:"What does the Duty of Confidentiality mean in professional nursing?",back:"A nurse must PROTECT ALL PRIVATE INFORMATION about a health consumer and only share it when:\n• NECESSARY FOR CARE (need-to-know basis), OR\n• REQUIRED BY LAW\n\nIn practice:\n1. Keep patient info private — anything learned through your role must not be shared with uninvolved parties\n2. Share only with health professionals who need it to provide safe, effective care\n3. Be careful about WHERE you discuss patients — NOT in hallways, lifts, cafeterias, or online\n4. Follow the Code of Conduct, Privacy Act, and Health Information Privacy Code\n\nBreaching confidentiality erodes public trust in the nursing profession and can result in complaints to the Nursing Council, Privacy Commissioner involvement, or legal action.\n\n(Module 1 / Module 2 / Module 5)"},
+  {id:36,lo:"FOPD",topic:"Self-Reflection",front:"What is the role of self-reflection in NZ nursing professionalism?",back:"Self-reflection is embedded in NCNZ competency standards — it is a core professional requirement, not just a personal exercise.\n\n1. SUPPORTS SAFE, ACCOUNTABLE PRACTICE — helps recognise strengths and limitations; ensures practice within competence (links to Pou 6.3 and Pou 4.11)\n\n2. IMPROVES QUALITY OF CARE — refines clinical skills, communication, and decision-making\n\n3. ENHANCES CULTURAL SAFETY — helps examine own biases, assumptions, and cultural lens; essential for upholding mana and respecting diversity; aligns with Te Tiriti o Waitangi (Pou 1 and Pou 2)\n\n4. STRENGTHENS PROFESSIONAL IDENTITY — part of ongoing professional development; understanding how values and experiences shape practice\n\n5. SUPPORTS ETHICAL, COMPASSIONATE CARE — encourages empathy, emotional awareness, and integrity (Code of Conduct values)\n\n(Module 1 / Module 6)"},
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -256,19 +259,48 @@ const FLASHCARDS = [
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const STUDY_SECTIONS = [
-  {id:"therapeutic",title:"Therapeutic Relationships",lo:"LO2",html:`
+  {id:"professionalism",title:"Professionalism & the Professional Nurse",lo:"LO2",html:`
+<h3>What Is Professionalism?</h3>
+<p>Professionalism is demonstrating the <strong>professional, legal and ethical standards</strong> required in practice. This includes the knowledge, skills, values and attributes expected of the nursing profession (Module 1).</p>
+<div class="highlight"><strong>Acting professionally implies:</strong> the person is conscientious in actions, knowledgeable in the subject, responsible to self and others, integrates intellectual and professional standards into practice, and uses appropriate clinical judgement.</div>
+<h4>NCNZ Definition of Competence (2022)</h4>
+<p>Competence is the combination of <strong>skills, knowledge, attitudes, values and abilities</strong> that underpin effective performance as a nurse.</p>
+<table>
+  <tr><th>Component</th><th>What it includes</th></tr>
+  <tr><td>Knowledge</td><td>Nursing knowledge, anatomy & physiology, social science, environmental science, behavioural science, pharmacology</td></tr>
+  <tr><td>Skills</td><td>Communication (number one), assessment skills, technological abilities. Hindrances include pre-occupation with personal affairs, making assumptions, stereotypes</td></tr>
+  <tr><td>Attitudes</td><td>Caring and compassion — caring is a mutually beneficial experience for nurse and patient (Watson, 2008)</td></tr>
+  <tr><td>Values</td><td>Respect, Trust, Partnership, Integrity (professional values — NCNZ). Note: conflict can arise between personal and professional values</td></tr>
+  <tr><td>Abilities</td><td>Critical thinking, time management, leadership, willingness to learn</td></tr>
+</table>
+<h4>8 Core Characteristics of the Professional Nurse</h4>
+<ul>
+  <li><strong>Competence · Knowledge · Conscientiousness · Integrity</strong></li>
+  <li><strong>Respect · Emotional Intelligence · Appropriateness · Confidence</strong></li>
+</ul>
+<p>Additional important characteristics: Caring, Communication, Empathy, Attention to detail, Problem solving, Stamina, Sense of Humour, Patient Advocacy, Willingness to learn, Critical thinking, Time management, Leadership.</p>
+<h4>Benner's Novice to Expert Model</h4>
+<table>
+  <tr><th>Stage</th><th>Description</th></tr>
+  <tr><td>1 — Novice</td><td>Beginner; rule-based practice</td></tr>
+  <tr><td>2 — Advanced Beginner</td><td>Principles based on experience begin to guide actions</td></tr>
+  <tr><td>3 — Competent</td><td>Plans actions based on analytic thinking; efficient and organised</td></tr>
+  <tr><td>4 — Proficient</td><td>Holistic decision making; can modify plans based on experience</td></tr>
+  <tr><td>5 — Expert</td><td>Intuitive knowing in clinical decisions; flexible, highly proficient</td></tr>
+</table>
+<p>All PDRP (Professional Development Recognition Programme) is modelled on Benner's novice to expert model.</p>
+<h4>Professional Self-Care</h4>
+<p>Professional self-care is the awareness you have as a health professional to maintain professional boundaries and care for yourself effectively. You need to know your strengths and weaknesses and be able to ask for help and support. <strong>Burnout is an occupational hazard.</strong></p>
+<ul>
+  <li>Mindfulness, supervision, exercise, diet, time management</li>
+  <li>Family and friends, student groups/buddies</li>
+  <li>Debrief with colleagues after highly emotional shifts</li>
+</ul>
+`},
+  {id:"therapeutic",title:"Therapeutic Relationships & Professional Boundaries",lo:"LO2",html:`
 <h3>The Therapeutic Relationship</h3>
 <p>The therapeutic relationship is the professional nurse-client relationship. It is fundamentally different from a social relationship.</p>
-<h4>Key characteristics</h4>
-<ul>
-  <li><strong>Defined timeframe</strong> — begins when care starts and ends when goals are met or the client is discharged</li>
-  <li><strong>Goal-directed</strong> — purpose is improving the client's health outcomes</li>
-  <li><strong>High expectation of confidentiality</strong> — legally and ethically required</li>
-  <li><strong>Client's needs come first</strong> — the nurse's personal needs are always secondary</li>
-  <li><strong>Professional boundaries</strong> — the nurse is always responsible for maintaining them</li>
-  <li><strong>Power imbalance</strong> — the nurse holds knowledge, authority, and access to personal information</li>
-</ul>
-<h4>Four Components (always present)</h4>
+<h4>Four Components (always present — regardless of context or length of interaction)</h4>
 <ul>
   <li><strong>Power</strong> — the nurse has knowledge and authority the client does not</li>
   <li><strong>Trust</strong> — the client must feel safe in the nurse's care</li>
@@ -285,18 +317,16 @@ const STUDY_SECTIONS = [
   <tr><td>Confidentiality</td><td>Varied</td><td>Legally and ethically required</td></tr>
   <tr><td>Power</td><td>Relatively equal</td><td>Nurse holds more power</td></tr>
 </table>
-<div class="warn">⚠️ <strong>Short-answer tip:</strong> If asked to differentiate, always mention: purpose, timeframe, power imbalance, whose needs come first, and confidentiality.</div>
-`},
-  {id:"boundaries",title:"Professional Boundaries",lo:"LO2",html:`
-<h3>Definition</h3>
-<p>Professional boundaries are the <strong>spaces between the nurse's power and the client's vulnerability</strong>.</p>
-<div class="highlight"><strong>Key rule:</strong> The nurse is ALWAYS responsible for establishing and maintaining boundaries, regardless of how a client behaves. The relationship ends when the therapeutic relationship ends.</div>
+<div class="warn">⚠️ The nurse-patient relationship ends when the therapeutic relationship ends — when goals are met or the patient is discharged.</div>
+<h3>Professional Boundaries</h3>
+<p>Professional boundaries are the <strong>spaces between the nurse's power and the client's vulnerability</strong>. They are imposed by ethical, legal and professional standards of nursing.</p>
+<div class="highlight"><strong>Key rule:</strong> The nurse is ALWAYS responsible for establishing and maintaining boundaries, regardless of how a client behaves.</div>
 <h4>Three Zones of Involvement</h4>
 <table>
   <tr><th>Zone</th><th>Description</th><th>Problem</th></tr>
-  <tr><td>Under-involvement</td><td>Task-focused only, emotionally absent</td><td>Neglects holistic care, dehumanises the client</td></tr>
-  <tr><td>Therapeutic zone ✓</td><td>Emotionally present but objective, active listening</td><td>This is the IDEAL</td></tr>
-  <tr><td>Over-involvement</td><td>Loss of objectivity, emotional entanglement</td><td>Compromises safe care and judgement</td></tr>
+  <tr><td>Under-involvement</td><td>Disengaged; mechanically carrying out tasks</td><td>Neglects holistic care; dehumanises the client</td></tr>
+  <tr><td>Therapeutic zone ✓</td><td>Emotionally present but objective; active listening</td><td>This is the IDEAL</td></tr>
+  <tr><td>Over-involvement</td><td>Loss of objectivity; emotional entanglement</td><td>Compromises safe care and clinical judgement</td></tr>
 </table>
 <h4>Examples of Under-Involvement</h4>
 <ul>
@@ -304,92 +334,100 @@ const STUDY_SECTIONS = [
   <li>Taking shortcuts (e.g. skipping hand-washing or a dressing change)</li>
   <li>Blaming the client for lack of progress</li>
   <li>Using disrespectful, demeaning, insulting, or humiliating language or tone</li>
+  <li>Withholding information the client needs to make an informed decision</li>
 </ul>
 <h4>Examples of Over-Involvement</h4>
 <ul>
-  <li>Engaging in personal conversations, flirtation, off-colour jokes, or sexual innuendo</li>
-  <li>Feeling excitement, longing, romantic or sexual thoughts about a client</li>
+  <li>Thinking about the client frequently when away from work</li>
+  <li>Giving preferential care or time to the client</li>
   <li>Hiding your relationship with the client from others</li>
+  <li>Spending breaks or time off with the client; providing personal contact details</li>
+  <li>Feeling excitement, longing, romantic or sexual thoughts related to the client</li>
   <li>Refusing to transfer care when therapeutically indicated</li>
-  <li>Sharing excessive personal information with the client</li>
 </ul>
-<div class="warn">⚠️ <strong>Short-answer tip:</strong> Always give specific examples and link them back to the Code of Conduct values (respect, trust, partnership, integrity).</div>
+<h4>NCNZ Disciplinary Action — Real Cases (Module 2 / Module 5)</h4>
+<ul>
+  <li>Mrs A had her registration suspended for 6 months and was subject to clinical supervision on return to practice, after becoming entangled in financial affairs of a patient.</li>
+  <li>Mr S was suspended for 12 months, censured and had conditions placed on his scope of practice after entering into a sexual relationship with the estranged wife of a patient.</li>
+  <li>Prison nurse provided accommodation for an ex-prisoner who had recently been under her care — found guilty of professional misconduct due to the prisoner's vulnerability.</li>
+</ul>
+<div class="warn">⚠️ <strong>Short-answer tip:</strong> Always link boundary violations to the patient's vulnerability and the nurse's power. Reference specific Code of Conduct principles (especially principles 1, 4, 7, 8).</div>
 `},
-  {id:"communication",title:"Communication & Confidentiality",lo:"LO2",html:`
-<h3>Bridges to Therapeutic Communication</h3>
-<ul>
-  <li><strong>Respect</strong> — being genuinely respectful</li>
-  <li><strong>Caring</strong> — using knowledge and skill therapeutically</li>
-  <li><strong>Empowerment</strong> — helping the person take charge of their own life</li>
-  <li><strong>Trust</strong> — ensuring the client feels safe</li>
-  <li><strong>Empathy</strong> — understanding the client's feelings (not just sympathy)</li>
-  <li><strong>Mutuality</strong> — sharing in resolving the client's health concerns</li>
-  <li><strong>Ethical values</strong> — veracity (truthfulness), confidentiality, justice, beneficence (doing good)</li>
-</ul>
-<h3>Duty of Confidentiality</h3>
-<p>A nurse must <strong>protect ALL private information</strong> about a health consumer and only share it when necessary for care or required by law.</p>
-<ul>
-  <li>Keep all patient information private — anything learned through your role must NOT be shared with uninvolved parties</li>
-  <li>Share only on a <strong>"need-to-know" basis</strong> with other health professionals involved in care</li>
-  <li>Communicate <strong>respectfully and securely</strong> — NOT in hallways, lifts, cafeterias, or online</li>
-  <li>Follow the <strong>Code of Conduct, Privacy Act, and Health Information Privacy Code</strong></li>
-</ul>
-<h3>Self-Reflection</h3>
-<p>Self-reflection is a <strong>core professional requirement</strong> in NZ nursing. It helps nurses:</p>
-<ul>
-  <li>Recognise strengths and limitations → practise within competence</li>
-  <li>Improve clinical skills, communication, and decision-making</li>
-  <li>Examine biases and assumptions → enhance cultural safety</li>
-  <li>Strengthen professional identity through ongoing development</li>
-  <li>Encourage empathy, emotional awareness, and integrity</li>
-</ul>
-`},
-  {id:"cultural",title:"Cultural Safety & Te Tiriti",lo:"LO2",html:`
-<h3>What Is Cultural Safety?</h3>
-<p>Cultural safety is the <strong>effective nursing practice</strong> of a person or family from another culture, <strong>as determined by that person or family</strong> (Ramsden, 2002).</p>
-<div class="highlight"><strong>Key point:</strong> Cultural safety is an OUTCOME — it is defined by the RECIPIENT of care, not by the nurse. An unsafe cultural practice is any action that diminishes, demeans, or disempowers someone's cultural identity.</div>
-<h4>What Cultural Safety Requires of a Nurse</h4>
-<ul>
-  <li>Work from the <strong>cultural perspective of the other person</strong>, not your own</li>
-  <li>Reflect on your <strong>own biases, assumptions, and cultural lens</strong></li>
-  <li>Ask the person (or their whānau/representatives) what they prefer, then meet those preferences</li>
-  <li>Try to understand the person's history by talking to them and their family</li>
-  <li>Ask questions when unsure — this is respectful, not intrusive</li>
-  <li>Challenge racism and discrimination in healthcare delivery</li>
-</ul>
-<h3>Te Tiriti o Waitangi and Nursing</h3>
-<p>Te Tiriti provides the <strong>foundation for working in partnership with Māori</strong> to address health inequities. The NCNZ competencies integrate its articles and principles.</p>
+  {id:"cultural",title:"Cultural Safety, Te Tiriti & Six Pou",lo:"LO2",html:`
+<h3>Cultural Safety</h3>
+<p>Cultural safety ensures that registered nurses provide culturally safe care that is inclusive, responsive and equitable. This requires nurses to reflect on their practice, understand their cultural identity and the power imbalances between the nurse and the recipient of care. (NCNZ Standards of Competence 2025 — Module 6)</p>
+<h4>Kawa Whakaruruhau vs Whakapapa-Centred Care</h4>
+<table>
+  <tr><th>Concept</th><th>Meaning</th></tr>
+  <tr><td><strong>Kawa whakaruruhau</strong></td><td>Cultural safety in the Māori context. Ensures care is respectful and responsive to the cultural needs and identities of Māori. Provides an environment where Māori feel safe, respected and understood without fear of discrimination. Requires nurses to reflect on their own discrimination and bias.</td></tr>
+  <tr><td><strong>Whakapapa-centred care</strong></td><td>Care that acknowledges a person's heritage, family connections and identity. Goes beyond treating physical symptoms to incorporate a deeper understanding of the individual's background, values and relationships, particularly for Māori. Emphasises connections to family and ancestors as central to well-being.</td></tr>
+</table>
+<h3>The Six Pou — NCNZ RN Standards of Competence 2025</h3>
+<p>There are six pou (standards) for the registered nurse standards of competence. Each pou is interrelated and demonstrated in practice simultaneously. (Module 6)</p>
 <h4>Pou One — Māori Health</h4>
 <ul>
-  <li>1.1 Engage in ongoing PD on Māori health and Te Tiriti</li>
-  <li>1.2 Advocate for health equity for Māori in all situations</li>
-  <li>1.3 Understand the impact of social determinants (colonisation) on health</li>
-  <li>1.4 Use te reo and incorporate tikanga Māori where appropriate</li>
+  <li>1.1 Engages in ongoing PD related to Māori health and Te Tiriti o Waitangi</li>
+  <li>1.2 Advocates for health equity for Māori in all situations and contexts</li>
+  <li>1.3 Understands the impact of social determinants (e.g. colonisation) on health</li>
+  <li>1.4 Uses te reo and incorporates tikanga Māori where appropriate</li>
 </ul>
 <h4>Pou Two — Cultural Safety</h4>
 <ul>
-  <li>2.1 Practise culturally safe care determined by the recipient</li>
-  <li>2.2 Challenge racism and discrimination in healthcare</li>
-  <li>2.3 Engage in partnership with individuals, whānau, and communities</li>
-  <li>2.4 Advocate by including cultural, spiritual, physical, and mental health</li>
-  <li>2.5 Contribute to collaborative team culture respecting diversity</li>
+  <li>2.1 Practises culturally safe care determined by the recipient</li>
+  <li>2.2 Challenges racism and discrimination in healthcare delivery</li>
+  <li>2.3 Engages in partnership with individuals, whānau and communities</li>
+  <li>2.4 Advocates by including cultural, spiritual, physical and mental health</li>
+  <li>2.5 Contributes to a collaborative team culture respecting diversity including intersectional identities</li>
+</ul>
+<h4>Pou Three — Whanaungatanga and Communication</h4>
+<ul>
+  <li>3.1 Understands and complies with professional, ethical, legal and organisational policies for information</li>
+  <li>3.2 Determines language and communication needs (verbal and non-verbal) of people and whānau</li>
+  <li>3.3 Incorporates professional, therapeutic and culturally appropriate communication in all interactions</li>
+  <li>3.6 Ensures documentation is legible, relevant, accurate, professional and timely</li>
+  <li>3.7 Uses appropriate digital and online communication</li>
+</ul>
+<h4>Pou Four — Pūkengatanga and Evidence-Informed Nursing Practice</h4>
+<ul>
+  <li>4.2 Develops differential diagnoses based on comprehensive assessment and current evidence</li>
+  <li>4.5 Safely manages medicines based on pharmacotherapeutic knowledge</li>
+  <li>4.9 Applies infection prevention and control principles</li>
+  <li>4.10 Identifies, assesses and responds to emerging risks by escalating to the appropriate person</li>
+  <li>4.11 Understands and works within the limits of expertise and seeks guidance to ensure safe practice</li>
+</ul>
+<h4>Pou Five — Manaakitanga and People-Centred Care</h4>
+<ul>
+  <li>5.1 Ensures integrated relational and whakapapa-centred care</li>
+  <li>5.2 Upholds the mana of individuals, whānau and the nursing profession</li>
+  <li>5.3 Facilitates opportunities for people and whānau to share views and contribute to care planning</li>
+  <li>5.4 Establishes, maintains and concludes safe therapeutic relationships</li>
+</ul>
+<h4>Pou Six — Rangatiratanga and Leadership</h4>
+<ul>
+  <li>6.1 Actively contributes to a collaborative team culture of respect, support and trust</li>
+  <li>6.2 Demonstrates professional and ethical accountabilities; adheres to NCNZ Code of Conduct</li>
+  <li>6.3 Understands continuous learning; proactively seeks opportunities for professional development</li>
+  <li>6.4 Engages in quality improvement activities</li>
+  <li>6.5 Identifies and responds appropriately to risk impacting health, safety and wellbeing of self and others</li>
+  <li>6.6 Understands the impact of healthcare provision on global and local resources</li>
 </ul>
 `},
-  {id:"legislation",title:"Legislation & HPCAA",lo:"LO4",html:`
+  {id:"legislation",title:"Legislation, HDC Code & NCNZ vs NZNO",lo:"LO4",html:`
 <h3>Health Practitioners Competence Assurance Act (HPCAA) 2003</h3>
 <ul>
   <li>The <strong>overarching law</strong> governing ALL health professions in NZ</li>
   <li>Requires the Nursing Council to set standards of competence and codes of conduct under <strong>section 118(i)</strong></li>
   <li>Purpose: to <strong>protect the health and safety of the public</strong></li>
+  <li>Section 16 — candidates for registration must meet fitness to practise criteria</li>
+  <li>Vulnerable Children Act 2014 — requires disclosure of convictions (Module 1)</li>
 </ul>
-<h3>Other Key Legislation</h3>
+<h3>Other Key Legislation (Module 1 / Module 5)</h3>
 <table>
-  <tr><th>Law</th><th>Relevance</th></tr>
-  <tr><td>Privacy Act</td><td>Protects personal information</td></tr>
-  <tr><td>Health Information Privacy Code</td><td>Specific rules for health information</td></tr>
-  <tr><td>HDC Code</td><td>10 rights of health consumers</td></tr>
-  <tr><td>Harmful Digital Communications Act 2015</td><td>Social media conduct</td></tr>
-  <tr><td>Employment Relations Act 2000</td><td>Nurses' rights and obligations online</td></tr>
+  <tr><th>Law</th><th>Relevance to Nursing</th></tr>
+  <tr><td>Privacy Act</td><td>Ethical and legal obligation to protect patient information; breaching confidentiality can result in involvement of the Privacy Commissioner or legal action</td></tr>
+  <tr><td>HDC Code of Rights</td><td>10 rights of health consumers — consumers have rights; professionals have obligations</td></tr>
+  <tr><td>Harmful Digital Communications Act 2015</td><td>10 principles for digital communications; NetSafe is the complaints agency; district court can order harmful posts removed</td></tr>
+  <tr><td>Employment Relations Act 2000</td><td>Clause 14 — freedom of expression; clause 17 — professional accountability for online expression</td></tr>
 </table>
 <h3>HDC Code — 10 Rights of Health Consumers</h3>
 <ul>
@@ -404,198 +442,217 @@ const STUDY_SECTIONS = [
   <li><strong>Right 9</strong> — Rights in respect of teaching or research</li>
   <li><strong>Right 10</strong> — Right to complain</li>
 </ul>
-`},
-  {id:"code",title:"NCNZ Code of Conduct",lo:"LO4",html:`
-<h3>Four Core Values</h3>
-<ul>
-  <li><strong>Respect</strong> — valuing dignity, privacy, and individuality</li>
-  <li><strong>Trust</strong> — acting in ways that maintain public confidence</li>
-  <li><strong>Partnership</strong> — working alongside consumers, whānau, and communities for shared decision-making</li>
-  <li><strong>Integrity</strong> — being honest, accountable, and ethical</li>
-</ul>
-<h3>Eight Principles</h3>
-<table>
-  <tr><th>#</th><th>Principle</th></tr>
-  <tr><td>1</td><td>Respect the <strong>dignity and individuality</strong> of health consumers</td></tr>
-  <tr><td>2</td><td>Respect the <strong>cultural needs and values</strong> of health consumers</td></tr>
-  <tr><td>3</td><td>Work in <strong>partnership</strong> with health consumers to promote and protect their <strong>well-being</strong></td></tr>
-  <tr><td>4</td><td>Maintain health consumer trust by providing <strong>safe and competent care</strong></td></tr>
-  <tr><td>5</td><td>Respect health consumers' <strong>privacy and confidentiality</strong></td></tr>
-  <tr><td>6</td><td>Work <strong>respectfully with colleagues</strong> to best meet health consumers' needs</td></tr>
-  <tr><td>7</td><td>Act with <strong>integrity</strong> to justify health consumers' trust</td></tr>
-  <tr><td>8</td><td>Maintain <strong>public trust and confidence</strong> in the nursing profession</td></tr>
-</table>
-<div class="memory-aid">💡 <strong>Memory aid:</strong> Principles 1–3 = Respect & Partnership · Principle 4 = Safe care · Principle 5 = Privacy · Principle 6 = Colleagues · Principles 7–8 = Integrity & Public trust</div>
 <h3>NCNZ vs NZNO</h3>
 <table>
   <tr><th>Feature</th><th>NCNZ (Nursing Council)</th><th>NZNO (Nurses Organisation)</th></tr>
-  <tr><td>Type</td><td>Regulatory body (statutory authority)</td><td>Professional body and union</td></tr>
+  <tr><td>Type</td><td>Regulatory body — statutory authority</td><td>Professional body and union</td></tr>
   <tr><td>Purpose</td><td>Protect the PUBLIC</td><td>Advocate for NURSES</td></tr>
-  <tr><td>Sets</td><td>Code of Conduct, competencies, scopes of practice</td><td>Code of Ethics, standards of practice</td></tr>
-  <tr><td>Power</td><td>Can register, discipline, and deregister nurses</td><td>Supports nurses' employment rights</td></tr>
+  <tr><td>Sets</td><td>Code of Conduct, competencies, scopes of practice, guidelines on professional boundaries and social media</td><td>Code of Ethics (NZNO, 2010), Standards of Nursing Practice (NZNO, 2012)</td></tr>
+  <tr><td>Power</td><td>Can register, discipline, and deregister nurses</td><td>Supports nurses' employment rights; membership voluntary</td></tr>
   <tr><td>Established by</td><td>HPCAA 2003</td><td>Voluntary membership</td></tr>
 </table>
+<div class="memory-aid">💡 <strong>Memory aid:</strong> NCNZ = protects the PUBLIC. NZNO = supports NURSES.</div>
 `},
-  {id:"social",title:"Social Media & Competence",lo:"LO4",html:`
-<h3>Why Maintain Boundaries on Social Media?</h3>
-<ul>
-  <li><strong>Protect patient privacy & confidentiality</strong> — posts spread quickly and permanently; even vague comments can identify a patient or breach the Privacy Act and Code of Conduct</li>
-  <li><strong>Uphold public trust</strong> — unprofessional posts (even on "private" accounts) damage confidence in the profession. Nurses are ALWAYS seen as nurses, on and off duty</li>
-  <li><strong>Avoid blurring personal and professional roles</strong> — "friending" patients creates dual relationships, risking over-involvement, favouritism, or inappropriate familiarity</li>
-  <li><strong>Maintain safe, ethical, culturally respectful practice</strong> — posts can be misinterpreted or cause harm</li>
-</ul>
-<h3>Key Social Media Rules (NZNO 2019 Guidelines)</h3>
-<ul>
-  <li>You have an ethical and <strong>legal responsibility</strong> to maintain patient privacy and confidentiality at ALL times</li>
-  <li><strong>NEVER</strong> transmit information or images related to client care under any circumstances</li>
-  <li>Passwords are <strong>NOT foolproof</strong> — "private" does not mean secure</li>
-  <li>Do NOT publish anything that could <strong>identify a patient</strong> (including rare diagnoses)</li>
-  <li>Maintain <strong>confidentiality of the organisation</strong> where you work</li>
-  <li><strong>NEVER post photos</strong> without the express permission of the people in them</li>
-  <li>Once online, information is <strong>almost impossible to completely remove</strong></li>
-</ul>
-<div class="highlight"><strong>Real-world consequences:</strong> A Canadian nurse (Carolyn Strom) was fined $26,000 for a Facebook post criticising care her grandfather received — even though she was on parental leave and posted on her personal page. Her appeal was denied. A nurse in the UK was struck off the register for a Facebook connection with a patient.</div>
-<h3>Responding to Tasks Beyond Your Competence</h3>
-<ul>
-  <li><strong>1. Speak up early</strong> — clearly state you don't feel competent or confident</li>
-  <li><strong>2. Explain professionally</strong> — "I haven't been trained, assessed, or supervised in this skill"</li>
-  <li><strong>3. Seek support</strong> — ask for supervision, additional teaching, or to observe first</li>
-  <li><strong>4. Ensure safe care</strong> — make sure a competent clinician takes over</li>
-  <li><strong>5. Reflect and plan</strong> — arrange training to develop the skill afterward</li>
-</ul>
-`},
-  {id:"fopd",title:"FOPD Professionalism — Core Topics",lo:"FOPD",html:`
-<h3>🌿 Four Core Values of the NCNZ Code of Conduct</h3>
+  {id:"code",title:"NCNZ Code of Conduct",lo:"LO4",html:`
+<h3>Four Core Values (NCNZ Code of Conduct 2012)</h3>
 <ul>
   <li><strong>Respect</strong> — valuing the dignity, privacy, and individuality of every health consumer</li>
   <li><strong>Trust</strong> — acting in ways that maintain the public's confidence in nurses and the profession</li>
   <li><strong>Partnership</strong> — working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care</li>
   <li><strong>Integrity</strong> — being honest, accountable, and acting ethically in all professional interactions</li>
 </ul>
+<div class="highlight"><strong>Key point:</strong> Without the public's trust and confidence in the profession, nurses cannot fulfil their role effectively. This means that what is personal and what is professional will inevitably overlap.</div>
+<h3>Eight Principles</h3>
+<table>
+  <tr><th>#</th><th>Principle</th></tr>
+  <tr><td>1</td><td>Respect the <strong>dignity and individuality</strong> of health consumers</td></tr>
+  <tr><td>2</td><td>Respect the <strong>cultural needs and values</strong> of health consumers</td></tr>
+  <tr><td>3</td><td>Work in <strong>partnership</strong> with health consumers to promote and protect their well-being</td></tr>
+  <tr><td>4</td><td>Maintain health consumer trust by providing <strong>safe and competent care</strong></td></tr>
+  <tr><td>5</td><td>Respect health consumers' <strong>privacy and confidentiality</strong></td></tr>
+  <tr><td>6</td><td>Work <strong>respectfully with colleagues</strong> to best meet health consumers' needs</td></tr>
+  <tr><td>7</td><td>Act with <strong>integrity</strong> to justify health consumers' trust</td></tr>
+  <tr><td>8</td><td>Maintain <strong>public trust and confidence</strong> in the nursing profession</td></tr>
+</table>
+<p>Eight principles with standards form the framework for the code. These principles are based on the values underpinning professional conduct and are of <strong>equal importance</strong>.</p>
+<div class="memory-aid">💡 <strong>Memory aid:</strong> Principles 1–3 = Respect & Partnership · Principle 4 = Safe care · Principle 5 = Privacy · Principle 6 = Colleagues · Principles 7–8 = Integrity & Public trust</div>
+<h3>Supporting NCNZ Guidelines</h3>
+<ul>
+  <li><strong>Guidelines: Professional Boundaries (2012)</strong> — discusses the sometimes challenging but critical issue of professional boundaries in more detail; designed to be read alongside the Code; the key message is that nurses must make the care of patients their FIRST CONCERN</li>
+  <li><strong>Guidelines: Social Media & Electronic Communication (2012)</strong> — guidance on online conduct; of the 8 Code principles, FOUR directly intersect with social media use</li>
+</ul>
+`},
+  {id:"social",title:"Social Media, Confidentiality & Competence",lo:"LO4",html:`
+<h3>Why Maintain Professional Boundaries on Social Media?</h3>
+<ul>
+  <li><strong>Protect patient privacy and confidentiality</strong> — patients don't have to be named to be identifiable; even vague comments can unintentionally identify a patient; deleted content may remain accessible; breaching confidentiality can result in complaints to the Nursing Council, Privacy Commissioner, or legal action</li>
+  <li><strong>Uphold public trust in the nursing profession</strong> — nurses are always seen as nurses, on and off duty; traditional professional standards still apply in the online context (NZNO, 2019)</li>
+  <li><strong>Avoid blurring personal and professional roles</strong> — 'friending' patients creates dual relationships; a power imbalance exists between nurses and patients; boundary violations can result in disciplinary action</li>
+  <li><strong>Maintain safe, ethical, culturally respectful practice</strong> — posts can be misinterpreted; nurses have an obligation to establish and enforce professional boundaries in the online environment</li>
+</ul>
+<h3>Key Social Media Rules — NZNO (2019) General Principles</h3>
+<ul>
+  <li>You have an ethical and <strong>legal obligation</strong> to maintain patient/client privacy and confidentiality at all times</li>
+  <li><strong>NEVER</strong> transmit any patient-related image or information that may violate confidentiality or privacy, or degrade or embarrass the patient</li>
+  <li>Do not identify patients by name or post information that may lead to identification — <strong>limiting access through privacy settings is NOT sufficient</strong></li>
+  <li>Never refer to patients in a disparaging manner, even if not identified</li>
+  <li>Maintain professional boundaries online — as with face-to-face, the nurse has an obligation to establish, communicate and enforce professional boundaries with patients</li>
+  <li>Use caution with online social contact with current or former patients — it may be prudent to <strong>avoid such contact</strong></li>
+  <li>Promptly <strong>report any breach</strong> of confidentiality or privacy</li>
+  <li>Do NOT make disparaging comments about employers, co-workers, teachers or fellow students online</li>
+</ul>
+<h3>Real Consequences (Module 1 — NZNO 2019)</h3>
+<div class="highlight"><strong>Carolyn Strom case:</strong> Canadian nurse disciplined and fined $1,000 plus $25,000 in hearing costs by the Saskatchewan Registered Nurses Association after a 2015 Facebook post criticising end-of-life care her grandfather received — even while on parental leave and posting on her personal page. Appeal upheld in 2018. Key lesson: professional standards apply at all times, online and offline.</div>
+<h3>Defamation</h3>
+<p>Defamation cases may be brought in a court of law and are <strong>civil claims</strong> in which substantial monetary compensation can be awarded. A defamatory statement: (1) is published to a third person, (2) identifies a subject, and (3) damages the reputation of the subject. Be mindful of comments about colleagues, employers, and large organisations. (Module 1)</p>
+<h3>Duty of Confidentiality</h3>
+<p>A nurse must <strong>protect all private information</strong> about a health consumer and only share it when necessary for their care or required by law.</p>
+<ul>
+  <li>Keep patient information private — NOT in hallways, lifts, cafeterias, or online</li>
+  <li>Share only on a <strong>"need-to-know" basis</strong> with health professionals involved in care</li>
+  <li>Follow the Code of Conduct, Privacy Act, and Health Information Privacy Code</li>
+  <li>The anonymity potentially afforded online is <strong>no excuse</strong> for breaching confidentiality</li>
+</ul>
+<h3>Responding to Tasks Beyond Your Competence</h3>
+<ul>
+  <li><strong>1. Speak up early</strong> — clearly state you don't feel competent or confident; prevents unsafe practice and shows accountability</li>
+  <li><strong>2. Explain professionally</strong> — "I haven't been trained, assessed, or supervised in this skill yet" (aligns with integrity)</li>
+  <li><strong>3. Seek support</strong> — ask for supervision, additional teaching, or to observe first</li>
+  <li><strong>4. Ensure safe care</strong> — make sure a competent nurse or clinician takes over; protects the patient and meets legal and ethical obligations</li>
+  <li><strong>5. Reflect and plan</strong> — arrange training to develop the skill; supports ongoing professional development (Pou 6.3)</li>
+</ul>
+<div class="warn">⚠️ Links to Principle 4 (safe and competent care), the value of Integrity, HPCAA 2003 section 16 (fitness to practise), and Pou 4.11 (works within limits of expertise).</div>
+`},
+  {id:"fopd",title:"FOPD Professionalism — Core Topics",lo:"FOPD",html:`
+<h3>🌿 Four Core Values of the NCNZ Code of Conduct</h3>
+<ul>
+  <li><strong>Respect</strong> — valuing the dignity, privacy, and individuality of every health consumer in all interactions</li>
+  <li><strong>Trust</strong> — acting in ways that maintain the public's confidence in nurses and the nursing profession</li>
+  <li><strong>Partnership</strong> — working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care</li>
+  <li><strong>Integrity</strong> — being honest, accountable, and acting ethically in all professional interactions</li>
+</ul>
 <h3>🌐 Social Media & Professional Boundaries</h3>
 <p>A nurse must maintain professional boundaries on social media because:</p>
 <ul>
-  <li><strong>Protect patient privacy and confidentiality</strong> — anything posted online can spread quickly and permanently. Even vague comments, photos, or stories can unintentionally identify a patient or breach the Privacy Act and the Code of Conduct.</li>
-  <li><strong>Uphold public trust in the nursing profession</strong> — Unprofessional posts — even on a "private" account — can damage the public's confidence in nurses and the wider profession. Nurses are always seen as nurses, on and off duty.</li>
-  <li><strong>Avoid blurring personal and professional roles</strong> — Connecting with patients online creates dual relationships and risks over‑involvement, favouritism, or inappropriate familiarity.</li>
-  <li><strong>Maintain safe, ethical, and culturally respectful practice</strong> — Social media posts can easily be misinterpreted or cause harm.</li>
+  <li><strong>Protect patient privacy and confidentiality</strong> — patients don't have to be named to be identifiable; privacy settings are NOT sufficient; deleted content may remain accessible (NZNO, 2019)</li>
+  <li><strong>Uphold public trust in the nursing profession</strong> — nurses are always seen as nurses, on and off duty; professional standards always apply online</li>
+  <li><strong>Avoid blurring personal and professional roles</strong> — 'friending' patients creates dual relationships; a power imbalance exists and maintenance of clear professional boundaries protects patients from exploitation</li>
+  <li><strong>Maintain safe, ethical, and culturally respectful practice</strong> — the nurse has an obligation to establish, communicate and enforce professional boundaries in the online environment</li>
 </ul>
 <h3>🔒 Duty of Confidentiality</h3>
-<p>The Duty of Confidentiality means that a nurse must protect all private information about a health consumer and only share it when it is necessary for their care or required by law.</p>
+<p>A nurse must protect all private information about a health consumer and only share it when necessary for their care or required by law. The anonymity potentially afforded online is no excuse for breaching confidentiality. Breaching confidentiality erodes public trust and can result in complaints to the Nursing Council, Privacy Commissioner, or legal action.</p>
 <ul>
-  <li><strong>Keeping patient information private</strong> — Anything a patient tells you — or anything you learn about them through your role — must not be shared with people who are not involved in their care.</li>
-  <li><strong>Only sharing information on a "need-to-know" basis</strong> — Information is communicated only to other health professionals who need it to provide safe, effective care.</li>
-  <li><strong>Communicating respectfully and securely</strong> — This includes being careful about where and how you talk about patients (e.g. not in hallways, lifts, or online).</li>
-  <li><strong>Following legal and ethical requirements</strong> — The Code of Conduct, Privacy Act, and Health Information Privacy Code all require nurses to protect patient confidentiality at all times.</li>
+  <li><strong>Keep patient information private</strong> — anything learned through your role must not be shared with uninvolved parties</li>
+  <li><strong>Need-to-know basis</strong> — only share with health professionals who need it for safe, effective care</li>
+  <li><strong>Communicate respectfully and securely</strong> — not in hallways, lifts, cafeterias, or online</li>
+  <li><strong>Follow legal and ethical requirements</strong> — Code of Conduct, Privacy Act, Health Information Privacy Code</li>
 </ul>
 <h3>🩺 Responding to Tasks Beyond Your Competence</h3>
-<p>A nurse must not perform tasks beyond their competence. They must speak up, seek supervision, and ensure the patient receives safe care from someone qualified.</p>
 <ul>
-  <li><strong>1. Acknowledge and speak up early</strong> — clearly state not feeling competent or confident. This prevents unsafe practice and shows accountability.</li>
-  <li><strong>2. Explain the reason professionally</strong> — "I have not been trained, assessed, or supervised in that skill yet." This aligns with the value of integrity.</li>
-  <li><strong>3. Seek guidance, supervision, or support</strong> — ask for supervision while performing the task, additional teaching, or to observe first. This shows commitment to learning while keeping patients safe.</li>
-  <li><strong>4. Ensure the task is completed safely</strong> — if they cannot perform it safely, ensure a competent nurse or clinician takes over. This protects the patient and meets legal and ethical obligations.</li>
-  <li><strong>5. Reflect and plan to build competence</strong> — arrange training or practice to develop the skill afterward. This supports ongoing professional development.</li>
+  <li><strong>1. Acknowledge and speak up early</strong> — state you do not feel competent or confident; prevents unsafe practice; demonstrates accountability</li>
+  <li><strong>2. Explain the reason professionally</strong> — "I have not been trained, assessed, or supervised in that skill yet" — aligns with integrity</li>
+  <li><strong>3. Seek guidance, supervision, or support</strong> — ask for supervision, teaching, or to observe; shows commitment to learning while keeping patients safe</li>
+  <li><strong>4. Ensure the task is completed safely</strong> — if unable to perform safely, ensure a competent nurse or clinician takes over; protects the patient; meets legal and ethical obligations</li>
+  <li><strong>5. Reflect and plan to build competence</strong> — arrange training or practice to develop the skill; supports ongoing professional development (Pou 6.3)</li>
 </ul>
 <h3>🌱 The Role of Self-Reflection in NZ Nursing Professionalism</h3>
 <ul>
-  <li><strong>Supports safe and accountable practice</strong> — helps nurses recognise their strengths and limitations, ensuring they practise within their competence and seek support when needed.</li>
-  <li><strong>Improves the quality of care</strong> — by reflecting on what went well and what could be improved, nurses refine their clinical skills, communication, and decision-making.</li>
-  <li><strong>Enhances cultural safety</strong> — reflection helps nurses examine their own biases, assumptions, and cultural lens. This is essential for practising in a way that upholds mana, respects diversity, and aligns with Te Tiriti o Waitangi.</li>
-  <li><strong>Strengthens professional identity and growth</strong> — reflection is part of ongoing professional development and helps nurses understand how their values, behaviours, and experiences shape their practice.</li>
-  <li><strong>Supports ethical and compassionate care</strong> — encourages empathy, emotional awareness, and integrity — all key values in the NCNZ Code of Conduct.</li>
+  <li><strong>Supports safe and accountable practice</strong> — recognise strengths and limitations; practise within competence; seek support when needed (links to Pou 4.11)</li>
+  <li><strong>Improves quality of care</strong> — refine clinical skills, communication, and decision-making</li>
+  <li><strong>Enhances cultural safety</strong> — examine own biases, assumptions, and cultural lens; upholds mana, respects diversity, aligns with Te Tiriti o Waitangi (Pou 1 and Pou 2)</li>
+  <li><strong>Strengthens professional identity and growth</strong> — part of ongoing professional development (Pou 6.3); understand how values and experiences shape practice</li>
+  <li><strong>Supports ethical and compassionate care</strong> — encourages empathy, emotional awareness, and integrity — all key Code of Conduct values</li>
 </ul>
-<div class="memory-aid">💡 <strong>Exam tip:</strong> These five topics directly match the SAQ questions in the FOPD Professionalism summative. Structure your answers: define the concept → give reasons/steps → link to the Code of Conduct values and/or relevant legislation.</div>
+<div class="memory-aid">💡 <strong>Exam tip:</strong> These five topics directly match the SAQ questions in the FOPD Professionalism summative. Structure your answers: define the concept → give reasons/steps → link to the Code of Conduct values and/or relevant legislation and NCNZ competency descriptors (six pou).</div>
 `},
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// QUIZ QUESTIONS (existing LO2/LO4)
+// QUIZ QUESTIONS
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const QUIZ = [
-  {id:1,lo:"LO2",q:"What are the four core values of the NCNZ Code of Conduct? Briefly explain each.",model:"The four core values are: Respect (valuing dignity, privacy, and individuality of every health consumer), Trust (acting in ways that maintain the public's confidence in nurses and the profession), Partnership (working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care), and Integrity (being honest, accountable, and acting ethically in all professional interactions). These values underpin the eight principles of the Code and guide all aspects of nursing conduct in Aotearoa New Zealand."},
-  {id:2,lo:"LO2",q:"Explain the difference between a therapeutic relationship and a social relationship.",model:"A therapeutic relationship is goal-directed, focused on improving the client's health outcomes, and has a defined timeframe — it begins with the start of care and ends at discharge or when care goals are met. The client's needs always take priority over the nurse's, there is a strict expectation of confidentiality that is legally and ethically required, and a power imbalance exists because the nurse holds knowledge and authority. A social relationship, in contrast, is mutual and ongoing, exists for both parties' enjoyment, has no formal boundaries or power imbalance, and confidentiality expectations are informal. The nurse is always responsible for maintaining professional boundaries in the therapeutic relationship to ensure safe, ethical care."},
-  {id:3,lo:"LO2",q:"What are professional boundaries and why are they important?",model:"Professional boundaries are the spaces between the nurse's power and the client's vulnerability. They are essential because the nurse holds a position of power and trust — power through knowledge, access to personal information, and authority over aspects of care. Without clear boundaries, there is a risk of over-involvement (losing objectivity, developing personal attachments that compromise judgement) or under-involvement (being emotionally absent, cutting corners in care, dehumanising the client). The nurse is ALWAYS responsible for maintaining these boundaries, regardless of how the client behaves. This protects the client's safety, upholds the Code of Conduct values of respect and trust, and maintains public confidence in the profession."},
-  {id:4,lo:"LO2",q:"What is cultural safety and how does it differ from cultural awareness? How is it determined?",model:"Cultural safety is the effective nursing practice of a person from another culture, as determined by that person or family (Ramsden, 2002). It goes beyond cultural awareness (simply knowing that cultural differences exist) and cultural sensitivity (being respectful of differences) by requiring the nurse to critically reflect on their own biases, assumptions, and power dynamics. Cultural safety is an OUTCOME defined by the RECIPIENT of care — the patient or whānau decides whether the care was culturally safe, not the nurse. It requires working from the cultural perspective of the other person, not your own. It is linked to Te Tiriti o Waitangi and requires nurses to challenge racism and discrimination, advocate for health equity, and ensure care does not diminish or demean cultural identity."},
-  {id:5,lo:"LO2",q:"How does Te Tiriti o Waitangi relate to nursing practice? What are the NCNZ competency requirements?",model:"Te Tiriti o Waitangi provides the foundation for working in partnership with Māori to address health inequities and support safe, effective care. The NCNZ standards of competence integrate its articles and principles. Under Pou One (Māori Health), registered nurses must: engage in ongoing professional development on Māori health and Te Tiriti (1.1), advocate for health equity for Māori in all situations (1.2), understand the impact of social determinants including colonisation on health and wellbeing (1.3), and use te reo and incorporate tikanga Māori where appropriate (1.4). Kawa whakaruruhau (cultural safety in the Māori context) requires nurses to ensure care is respectful, responsive, and provided in an environment where Māori feel safe without fear of discrimination."},
-  {id:6,lo:"LO2",q:"Give two examples of over-involvement and two examples of under-involvement. Explain why both extremes are harmful.",model:"Over-involvement examples: (1) Engaging in personal conversations, flirtation, or sexual innuendo with a client, and (2) refusing to transfer care to another provider when therapeutically indicated. Under-involvement examples: (1) Delaying answering a call bell or administering PRN medication unnecessarily, and (2) using disrespectful, demeaning, or humiliating language toward a client. Both extremes compromise safe care. Over-involvement leads to loss of objectivity, meaning the nurse can no longer make sound clinical judgements — their personal feelings interfere with professional decision-making. Under-involvement fails to meet the client's holistic care needs and dehumanises them, reducing care to task completion. The ideal is the therapeutic zone, where the nurse is emotionally present and actively listening, but remains objective."},
-  {id:7,lo:"LO4",q:"What is the HPCAA 2003 and how does it relate to the NCNZ Code of Conduct?",model:"The Health Practitioners Competence Assurance Act 2003 (HPCAA) is the overarching law governing ALL health professions in New Zealand. Its purpose is to protect the health and safety of the public. Under section 118(i) of the HPCAA, the Nursing Council of New Zealand (NCNZ) is required to set standards of competence and ethical conduct for nurses. The NCNZ Code of Conduct outlines the standards of behaviour that nurses are expected to uphold in their professional practice, framed around four core values (respect, trust, partnership, integrity) and eight principles. The Code serves both to advise nurses and to tell the public what they can expect from a nurse."},
-  {id:8,lo:"LO4",q:"What is the difference between NCNZ and NZNO?",model:"NCNZ (Nursing Council of New Zealand) is the regulatory authority established under the HPCAA 2003, and its primary purpose is to protect the health and safety of the public. It sets standards of competence, scopes of practice, and the Code of Conduct, and has the power to register, discipline, and deregister nurses. NZNO (New Zealand Nurses Organisation) is a professional body and union that advocates for nurses' employment rights and professional interests. It publishes the Code of Ethics and standards of practice, and membership is voluntary. In short: NCNZ protects the public; NZNO supports nurses. Both organisations set professional standards, but only NCNZ has regulatory and disciplinary authority."},
-  {id:9,lo:"LO4",q:"Name four principles of the NCNZ Code of Conduct and explain how they guide a nurse's use of social media.",model:"Principle 1 (respect dignity and individuality) means never posting content online that identifies, demeans, or disrespects a health consumer. Principle 5 (respect privacy and confidentiality) means never sharing patient information, images, or identifying details online — even vague references can breach confidentiality because patients don't have to be named to be identifiable. Principle 7 (act with integrity) requires nurses to ensure their online behaviour is honest, professional, and consistent with their professional role. Principle 8 (maintain public trust) means remembering that even 'private' posts reflect on the profession, and unprofessional behaviour online can damage public confidence in all nurses. The NCNZ and NZNO guidelines emphasise that nurses are always seen as nurses, on and off duty, and once information is online it is almost impossible to completely remove."},
-  {id:10,lo:"LO4",q:"What should a nurse do if asked to perform a task they do not feel competent to do?",model:"The nurse should first speak up early and clearly state that they do not feel competent or confident to perform the task — this prevents unsafe practice and demonstrates accountability. They should explain professionally that they have not been trained, assessed, or supervised in the skill, which aligns with the Code of Conduct value of integrity. They should then seek guidance by asking for supervision while performing the task, additional teaching, or the opportunity to observe first — this shows commitment to learning while keeping patients safe. If they cannot perform the task safely, they must ensure a competent nurse or clinician takes over, which protects the patient and meets legal and ethical obligations. Afterward, the nurse should reflect on the experience and arrange training or practice to develop the skill, supporting ongoing professional development. This approach upholds Principle 4 (providing safe and competent care) and the value of integrity."},
+  {id:1,lo:"LO2",q:"What is the NCNZ definition of competence? Break down its five components.",model:"According to NCNZ (2022), competence is the combination of skills, knowledge, attitudes, values and abilities that underpin effective performance as a nurse. Knowledge includes nursing knowledge, anatomy and physiology, social science, environmental science, behavioural science and pharmacology. Skills include communication (the number one skill), assessment skills and technological abilities — nurses can have hindrances such as pre-occupation with personal affairs or making assumptions about patient motivation. Attitudes include caring and compassion, which Watson (2008) describes as a mutually beneficial experience for both the patient and the nurse. Professional values include Respect, Trust, Partnership and Integrity (NCNZ), while noting that conflict can arise between personal and professional values. Abilities include critical thinking, time management, leadership and willingness to learn."},
+  {id:2,lo:"LO2",q:"Explain the difference between a therapeutic relationship and a social relationship.",model:"A therapeutic relationship is goal-directed, focused on improving the client's health outcomes, and has a defined timeframe — it begins with the start of care and ends at discharge or when care goals are met. The client's needs always take priority over the nurse's, there is a strict expectation of confidentiality that is legally and ethically required, and a power imbalance exists because the nurse holds knowledge and authority. A social relationship, in contrast, is mutual and ongoing, exists for both parties' enjoyment, has no formal boundaries or power imbalance, and confidentiality expectations are informal. The nurse is always responsible for maintaining professional boundaries in the therapeutic relationship. The relationship ends when the therapeutic relationship ends — when goals are met or the patient is discharged — regardless of the length of the relationship."},
+  {id:3,lo:"LO2",q:"What are professional boundaries and why are they important?",model:"Professional boundaries are the spaces between the nurse's power and the client's vulnerability. They are imposed by ethical, legal and professional standards of nursing. They are essential because the nurse holds a position of power and trust — power through knowledge, access to personal information, and authority over aspects of care. Without clear boundaries, there is a risk of over-involvement (losing objectivity; the nurse's personal feelings interfere with professional judgement) or under-involvement (being emotionally absent; cutting corners in care; dehumanising the client). The nurse is ALWAYS responsible for maintaining these boundaries, regardless of how the client behaves. Boundary violations can result in disciplinary action from the NCNZ, including suspension or conditions placed on scope of practice. The key message is that nurses must make the care of patients their FIRST CONCERN."},
+  {id:4,lo:"LO2",q:"What is burnout in nursing? What causes it and how can it be prevented?",model:"Burnout occurs when a nurse is physically, emotionally and spiritually exhausted due to insufficient rest and self-care. Signs include constant fatigue, feeling overworked or under-appreciated, lack of enthusiasm about work, and compassion fatigue. The effects of burnout are serious — it results in impaired attention, memory, and decision-making, which leads to decreased recall, attention to detail, poor patient care and compromised patient health outcomes. To prevent burnout, nurses should engage in professional self-care, which is the awareness to maintain professional boundaries and care for yourself effectively. Strategies include mindfulness, supervision, exercise, diet, time management, maintaining family and friend networks, and debriefing with colleagues after highly emotional shifts. Burnout is recognised as an occupational hazard for nurses (Module 2 / Module 5)."},
+  {id:5,lo:"LO2",q:"Describe Benner's Novice to Expert model. How does it relate to the PDRP?",model:"Benner's Novice to Expert model identifies five stages of clinical skill development. The novice is a beginner who relies on rule-based practice. The advanced beginner begins to formulate principles based upon experience to guide actions. The competent practitioner plans actions based on analytic thinking and is efficient and organised. The proficient practitioner uses holistic decision-making and can modify plans based on experience. The expert nurse demonstrates intuitive knowing in clinical decision situations and is flexible and highly proficient. All PDRP (Professional Development Recognition Programme) in New Zealand is modelled on Benner's novice to expert model, recognising that experience is not a time-based activity but develops with education and research (Module 1)."},
+  {id:6,lo:"LO4",q:"What is the HPCAA 2003 and what does it require of nurses and the Nursing Council?",model:"The Health Practitioners Competence Assurance Act 2003 (HPCAA) is the overarching law governing all health professions in New Zealand. Its purpose is to protect the health and safety of the public. Under section 118(i), the NCNZ is required to set standards of competence and ethical conduct for nurses — the Code of Conduct outlines the standards of behaviour that nurses are expected to uphold in their professional practice. Section 16 of the HPCAA specifies that all candidates for registration as a nurse must meet the criteria for fitness to practise. Nursing students must disclose criminal convictions that may prevent their registration, and the Vulnerable Children Act 2014 also requires disclosure of relevant information known to police. (Module 1 / Module 5)"},
+  {id:7,lo:"LO4",q:"What is the difference between NCNZ and NZNO?",model:"NCNZ (Nursing Council of New Zealand) is the regulatory authority established under the HPCAA 2003, and its primary purpose is to protect the health and safety of the public. It sets standards of competence, scopes of practice, and the Code of Conduct, and has the power to register, discipline, and deregister nurses. It also publishes guidelines on professional boundaries and social media and electronic communication. NZNO (New Zealand Nurses Organisation) is a professional body and union that advocates for nurses' employment rights and professional interests. It publishes the Code of Ethics (NZNO, 2010) and standards of nursing practice (NZNO, 2012), and membership is voluntary. In summary: NCNZ protects the public; NZNO supports nurses. Both organisations set professional standards, but only NCNZ has regulatory and disciplinary authority. (Module 1 / Module 5)"},
+  {id:8,lo:"LO4",q:"Name four of the eight principles of the NCNZ Code of Conduct. How do they guide nursing practice?",model:"The eight principles of the NCNZ Code of Conduct are of equal importance and are based on the four core values of respect, trust, partnership and integrity. Principle 1 (respect dignity and individuality) means valuing each health consumer as an individual in all interactions and care. Principle 4 (maintain trust by providing safe and competent care) requires nurses to practise within their competence and speak up when unable to perform a task safely. Principle 5 (respect privacy and confidentiality) means protecting all patient information and sharing it only on a need-to-know basis, which extends to not discussing patients in hallways or online. Principle 8 (maintain public trust and confidence) means that nurses are always seen as nurses — on and off duty — and their online and personal conduct reflects on the entire profession. These principles together create the framework for ethical, safe and professional nursing conduct. (Module 2 / Module 5)"},
+  {id:9,lo:"LO4",q:"Why must nurses maintain professional boundaries on social media? Give four reasons with reference to legislation or guidelines.",model:"First, nurses have an ethical and legal obligation to maintain patient confidentiality at all times, and online posts — even with privacy settings — can unintentionally identify a patient through a combination of information; breaching confidentiality can result in complaints to the Nursing Council, Privacy Commissioner, or legal action (Privacy Act; NZNO 2019 Guidelines). Second, nurses must uphold public trust in the profession — nurses are always seen as nurses on and off duty, and unprofessional posts on personal accounts can damage confidence in the profession (Principle 8 of the Code of Conduct). Third, connecting with patients online (such as 'friending' them on social media) creates dual relationships and risks boundary violations — a power imbalance exists between nurses and patients and maintenance of clear professional boundaries protects patients from exploitation (NCNZ Guidelines: Professional Boundaries, 2012). Fourth, the Harmful Digital Communications Act 2015 sets 10 principles for digital communications, meaning threatening, offensive or harassing online conduct can have legal consequences beyond professional disciplinary proceedings. (Module 1 / Module 5)"},
+  {id:10,lo:"LO4",q:"What should a nurse do if asked to perform a task they do not feel competent to do?",model:"The nurse should first speak up early and clearly state that they do not feel competent or confident to perform the task — this prevents unsafe practice and demonstrates accountability. They should explain professionally that they have not been trained, assessed, or supervised in the skill, which aligns with the Code of Conduct value of integrity. They should then seek guidance by asking for supervision while performing the task, additional teaching, or the opportunity to observe first — this shows commitment to learning while keeping patients safe. If they cannot perform the task safely, they must ensure a competent nurse or clinician takes over, which protects the patient and meets legal and ethical obligations (HPCAA 2003, section 16). Afterward, the nurse should reflect on the experience and arrange training or practice to develop the skill, supporting ongoing professional development in line with Pou 6.3 (continuous learning) and Pou 4.11 (works within limits of expertise) from the NCNZ Standards of Competence 2025. (Module 1 / Module 6)"},
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// FOPD SAQ QUESTIONS (new summative material)
+// FOPD SAQ QUESTIONS
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const FOPD_SAQS = [
   {
     id:'f1',
     q:'List and briefly explain the four core values of the NCNZ Code of Conduct.',
-    model:`<h4>The Four Core Values</h4>
+    model:`<h4>The Four Core Values (NCNZ Code of Conduct 2012)</h4>
 <ul>
-  <li><strong>Respect</strong> — valuing the dignity, privacy, and individuality of every health consumer in all interactions and aspects of care.</li>
-  <li><strong>Trust</strong> — acting in ways that maintain the public's confidence in nurses and the nursing profession as a whole.</li>
-  <li><strong>Partnership</strong> — working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care.</li>
-  <li><strong>Integrity</strong> — being honest, accountable, and acting ethically in all professional interactions.</li>
+  <li><strong>Respect</strong> — valuing the dignity, privacy, and individuality of every health consumer in all interactions and aspects of care. This underpins the nurse's obligation to treat every person as an individual.</li>
+  <li><strong>Trust</strong> — acting in ways that maintain the public's confidence in nurses and the nursing profession as a whole. Without public trust, nurses cannot fulfil their role effectively.</li>
+  <li><strong>Partnership</strong> — working alongside health consumers, whānau, and communities to support shared decision-making and culturally safe care. In Aotearoa NZ this includes partnership with Māori grounded in Te Tiriti o Waitangi (Module 6 — Pou One and Pou Two).</li>
+  <li><strong>Integrity</strong> — being honest, accountable, and acting ethically in all professional interactions. This includes both face-to-face care and online/social media behaviour.</li>
 </ul>`,
-    tip:'These four values underpin all eight principles of the Code. Exam answers should define each clearly — use the exact language from the Code (dignity, individuality, culturally safe, honest, accountable).'
+    tip:'These four values underpin all eight principles of the Code. What is personal and what is professional will inevitably overlap — link to specific examples from clinical practice and online conduct. Reference Module 2 / Module 5 (Code of Conduct) and Module 6 (Pou 6.2 — demonstrates professional and ethical accountabilities).'
   },
   {
     id:'f2',
     q:'Why must a nurse maintain professional boundaries on social media? Give at least four reasons.',
-    model:`<h4>Reasons for Maintaining Social Media Boundaries</h4>
+    model:`<h4>Reasons for Maintaining Social Media Boundaries (NZNO, 2019 — Module 1)</h4>
 <ul>
-  <li><strong>1. Protect patient privacy and confidentiality</strong> — Online content spreads quickly and permanently. Even vague comments or photos can unintentionally identify a patient and breach the Privacy Act and the Code of Conduct.</li>
-  <li><strong>2. Uphold public trust in the nursing profession</strong> — Unprofessional posts — even on a "private" account — can damage the public's confidence in nurses and the wider profession. Nurses are always seen as nurses, on and off duty.</li>
-  <li><strong>3. Avoid blurring personal and professional roles</strong> — Connecting with patients online (e.g. "friending" them) creates dual relationships and risks over-involvement, favouritism, or inappropriate familiarity.</li>
-  <li><strong>4. Maintain safe, ethical, and culturally respectful practice</strong> — Social media posts can easily be misinterpreted or cause harm. Nurses must ensure their online behaviour reflects respect, integrity, and cultural safety at all times.</li>
+  <li><strong>1. Protect patient privacy and confidentiality</strong> — Patients don't have to be named to be identifiable. Even vague comments, photos or stories can breach confidentiality. Privacy settings are NOT sufficient protection. Deleted content may remain accessible. Breaching confidentiality can result in Nursing Council complaints, Privacy Commissioner involvement, or legal action.</li>
+  <li><strong>2. Uphold public trust in the nursing profession</strong> — Traditional professional standards apply in the online context. Nurses are always seen as nurses, on and off duty. Unprofessional posts — even on a 'private' account — can damage public confidence (Code of Conduct Principle 8).</li>
+  <li><strong>3. Avoid blurring personal and professional roles</strong> — 'Friending' patients online creates dual relationships. A power imbalance exists between nurses and patients, and maintenance of clear professional boundaries protects patients from exploitation. Boundary violations can result in disciplinary action (NCNZ Guidelines: Professional Boundaries, 2012).</li>
+  <li><strong>4. Maintain safe, ethical, and culturally respectful practice</strong> — The nurse has an obligation to establish, communicate and enforce professional boundaries with patients in the online environment as well as face-to-face. Social media posts can be misinterpreted or cause harm to the therapeutic relationship.</li>
 </ul>`,
-    tip:'Link each reason to specific Code of Conduct principles: Principle 5 (privacy/confidentiality), Principle 8 (public trust), Principle 1 (dignity), Principle 7 (integrity). Mention the Harmful Digital Communications Act 2015 for extra credit.'
+    tip:'Link each reason to specific Code of Conduct principles: Principle 5 (privacy/confidentiality), Principle 8 (public trust), Principle 1 (dignity), Principle 7 (integrity). Also mention the Harmful Digital Communications Act 2015 (Module 1) and the NZNO 2019 social media guidelines. The Carolyn Strom case is a useful real-world example.'
   },
   {
     id:'f3',
     q:'What does the "Duty of Confidentiality" mean in professional nursing communication?',
-    model:`<h4>Duty of Confidentiality</h4>
-<p>The Duty of Confidentiality means a nurse must protect all private information about a health consumer and only share it when necessary for their care or required by law.</p>
+    model:`<h4>Duty of Confidentiality (Module 1 / Module 2 / Module 5)</h4>
+<p>The Duty of Confidentiality means a nurse must protect all private information about a health consumer and only share it when necessary for their care or required by law. The anonymity potentially afforded online is no excuse for breaching confidentiality.</p>
 <ul>
-  <li><strong>Keep patient information private</strong> — Anything a patient tells you, or anything you learn about them through your professional role, must not be shared with people not involved in their care.</li>
-  <li><strong>Share only on a "need-to-know" basis</strong> — Information is communicated only to other health professionals who require it to provide safe, effective care.</li>
-  <li><strong>Communicate respectfully and securely</strong> — Be careful about where and how you discuss patients. NOT in hallways, lifts, cafeterias, or online.</li>
-  <li><strong>Follow legal and ethical requirements</strong> — The Code of Conduct, Privacy Act, and Health Information Privacy Code all require nurses to protect patient confidentiality at all times.</li>
+  <li><strong>Keep patient information private</strong> — anything learned through your professional role must not be shared with people not involved in care. This applies online and in public spaces (hallways, lifts, cafeterias).</li>
+  <li><strong>Need-to-know basis only</strong> — information is communicated only to health professionals who require it to provide safe, effective care.</li>
+  <li><strong>Be aware of data harvesting</strong> — even a single carefully anonymised post can be linked to other information online that makes a patient identifiable. Privacy settings do not guarantee protection.</li>
+  <li><strong>Follow legal and ethical requirements</strong> — Code of Conduct (Principle 5), Privacy Act, and Health Information Privacy Code. Breaching confidentiality can result in complaints to the Nursing Council, Privacy Commissioner involvement, or civil legal action.</li>
 </ul>`,
-    tip:'Always name the specific legislation: Privacy Act, Health Information Privacy Code, and the Code of Conduct. Mention that "need-to-know" is the standard, and give a concrete example of where confidential communication is breached (hallways, social media).'
+    tip:'Always name specific legislation: Privacy Act, Health Information Privacy Code, and Code of Conduct Principle 5. Mention the NZNO 2019 guideline that "patients don\'t have to be named to be identifiable." Give a concrete example of where confidential communication is breached (social media, hallways). Link to Pou 3.1 from Module 6 (professional, ethical, legal and organisational policies for information).'
   },
   {
     id:'f4',
     q:'How should a nurse respond if asked to perform a task they do not feel competent to do?',
     model:`<h4>Responding to Tasks Beyond Competence — 5 Steps</h4>
 <ul>
-  <li><strong>1. Acknowledge and speak up early</strong> — Clearly state that you do not feel competent or confident to perform the task. This prevents unsafe practice and demonstrates accountability.</li>
-  <li><strong>2. Explain the reason professionally</strong> — State you have not been trained, assessed, or supervised in that skill yet. This aligns with the Code of Conduct value of integrity.</li>
-  <li><strong>3. Seek guidance, supervision, or support</strong> — Ask for supervision while performing the task, additional teaching, or an opportunity to observe first. This shows commitment to learning while keeping patients safe.</li>
-  <li><strong>4. Ensure the task is completed safely by someone competent</strong> — If you cannot perform it safely, ensure a competent nurse or clinician takes over. This protects the patient and meets legal and ethical obligations.</li>
-  <li><strong>5. Reflect and plan to build competence</strong> — Arrange training or practice afterward to develop the skill. This supports ongoing professional development.</li>
+  <li><strong>1. Acknowledge and speak up early</strong> — Clearly state that you do not feel competent or confident to perform the task. This prevents unsafe practice and demonstrates accountability. The nurse is responsible for their own practice (Module 1 — Characteristics of the Professional Nurse).</li>
+  <li><strong>2. Explain the reason professionally</strong> — State you have not been trained, assessed, or supervised in that skill yet. This aligns with the Code of Conduct value of integrity and HPCAA 2003 requirements for fitness to practise.</li>
+  <li><strong>3. Seek guidance, supervision, or support</strong> — Ask for supervision while performing the task, additional teaching, or an opportunity to observe first. This shows commitment to learning while keeping patients safe, consistent with Benner's novice to expert model.</li>
+  <li><strong>4. Ensure the task is completed safely by someone competent</strong> — If you cannot perform it safely, ensure a competent nurse or clinician takes over. This protects the patient and meets Code of Conduct Principle 4 (safe and competent care).</li>
+  <li><strong>5. Reflect and plan to build competence</strong> — Arrange training or practice afterward to develop the skill. This supports ongoing professional development consistent with Pou 6.3 (continuous learning) and Pou 4.11 (works within limits of expertise) from the NCNZ Standards of Competence 2025 (Module 6).</li>
 </ul>`,
-    tip:'Link your answer to Principle 4 (safe and competent care) and the value of Integrity. Mention that this approach balances patient safety with your development as a student nurse. HPCAA 2003 is also relevant — it underpins the obligation to practise within competence.'
+    tip:'Link to Principle 4 (safe and competent care) and the value of Integrity. Mention HPCAA 2003 section 16 (fitness to practise) and Pou 4.11 (Module 6). Reference Benner\'s model — novice nurses are expected to practise rule-based care and seek guidance (Module 1). Balance patient safety with your development as a student nurse.'
   },
   {
     id:'f5',
     q:'What is the role of self-reflection in New Zealand nursing professionalism?',
     model:`<h4>Role of Self-Reflection in NZ Nursing Professionalism</h4>
 <ul>
-  <li><strong>1. Supports safe and accountable practice</strong> — Self-reflection helps nurses recognise their strengths and limitations, ensuring they practise within their competence and seek support when needed.</li>
-  <li><strong>2. Improves the quality of care</strong> — By reflecting on what went well and what could be improved, nurses refine their clinical skills, communication, and decision-making.</li>
-  <li><strong>3. Enhances cultural safety</strong> — Reflection helps nurses examine their own biases, assumptions, and cultural lens. This is essential for practising in a way that upholds mana, respects diversity, and aligns with Te Tiriti o Waitangi.</li>
-  <li><strong>4. Strengthens professional identity and growth</strong> — Reflection is part of ongoing professional development. It helps nurses understand how their values, behaviours, and experiences shape their practice.</li>
-  <li><strong>5. Supports ethical and compassionate care</strong> — Reflective practice encourages empathy, emotional awareness, and integrity — all key values in the NCNZ Code of Conduct.</li>
+  <li><strong>1. Supports safe and accountable practice</strong> — Self-reflection helps nurses recognise their strengths and limitations, ensuring they practise within their competence and seek support when needed. This aligns with Pou 4.11 (works within limits of expertise) and Pou 6.5 (responds to risk) from the NCNZ Standards of Competence 2025 (Module 6).</li>
+  <li><strong>2. Improves quality of care</strong> — By reflecting on what went well and what could be improved, nurses refine their clinical skills, communication and decision-making. This is consistent with Benner's model of moving from novice to expert through reflective practice (Module 1).</li>
+  <li><strong>3. Enhances cultural safety</strong> — Reflection helps nurses examine their own biases, assumptions and cultural lens. This is essential for practising in a way that upholds mana, respects diversity, and aligns with Te Tiriti o Waitangi — foundational to Pou One (Māori Health) and Pou Two (Cultural Safety) (Module 6).</li>
+  <li><strong>4. Strengthens professional identity and growth</strong> — Reflection is part of ongoing professional development (Pou 6.3). It helps nurses understand how their values, behaviours and experiences shape their practice. The professional nurse has a commitment to making a difference to people's health and wellbeing (Module 1).</li>
+  <li><strong>5. Supports ethical and compassionate care</strong> — Encourages empathy, emotional awareness and integrity — all key Code of Conduct values. Caring is described as a mutually beneficial experience for both the patient and the nurse (Watson, 2008 — Module 1).</li>
 </ul>`,
-    tip:'Connect self-reflection to the Code of Conduct values (especially integrity) and to cultural safety (Te Tiriti o Waitangi). Mention that self-reflection is a core professional requirement in Aotearoa, not just a personal exercise — it is embedded in NCNZ competency standards.'
+    tip:'Connect self-reflection to the Code of Conduct values (especially integrity), the six pou (especially Pou 6.3, Pou 1 and Pou 2), Benner\'s model, and Watson\'s theory of caring (Module 1). Self-reflection is a core professional requirement in Aotearoa, not just a personal exercise — it is embedded in the NCNZ competency standards (Module 6).'
   },
 ];
-
 // ═══════════════════════════════════════════════════════════════════════════════
 // SRS ENGINE
 // ═══════════════════════════════════════════════════════════════════════════════
